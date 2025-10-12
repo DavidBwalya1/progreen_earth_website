@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact - Pro Green Earth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html"><span class="logo-text">PR<img src="progreen_logo.jpg" alt="O" class="logo-image">GREEN EARTH</span></a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="impact.html" class="active">Impact</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="funding.html">Funding</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Project Impact</h1>
+            <p class="page-subtitle">Creating Lasting Change for Communities and Environment</p>
+        </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=1200&h=600&fit=crop" alt="Healthy cattle">
+                <div class="carousel-caption">
+                    <h3>Improved Cattle Production</h3>
+                    <p>$3.3 million annual income increase for farmers</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?w=1200&h=600&fit=crop" alt="Green pastures">
+                <div class="carousel-caption">
+                    <h3>Restored Rangelands</h3>
+                    <p>Healthier ecosystems and reduced degradation</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1200&h=600&fit=crop" alt="Clean environment">
+                <div class="carousel-caption">
+                    <h3>Carbon Sequestration</h3>
+                    <p>34 million tons CO₂ over 40 years</p>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Highlights -->
+    <section class="section impact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Impact Highlights</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">🐄</div>
+                    <h3>Improved Cattle Production</h3>
+                    <p>Enhance cattle production and increase the value of livestock products in the region. By addressing key challenges in animal health, feeding, breeding, and market access, farmers can achieve higher productivity and better prices, raising farmer incomes by an estimated <strong>$3.3 million each year</strong>.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">🌾</div>
+                    <h3>Restore Degraded Rangelands</h3>
+                    <p>Restore degraded rangelands focusing on improving pasture quality, increase forage availability, and support more productive and sustainable livestock systems. These improvements contribute to healthier ecosystems, reduced land degradation, and greater resilience to climate shocks.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">💨</div>
+                    <h3>Carbon Sequestration</h3>
+                    <p>Over <strong>34 million tons of carbon dioxide equivalent</strong> could be sequestered over 40 years, with average annual net carbon removals of 0.8 tons CO₂e per hectare across project areas.</p>
+                </div>
+            </div>
+
+            <!-- Expected Outcomes -->
+            <div class="outcomes-section">
+                <h3 class="outcomes-title">Expected Outcomes</h3>
+                <div class="outcomes-grid">
+                    <div class="outcome-item">
+                        <h4>Disease and Mortality</h4>
+                        <ul>
+                            <li>Liver condemnation reduced from 80% to less than 15%</li>
+                            <li>Average mortality rates reduced from 10% to 5%</li>
+                        </ul>
+                    </div>
+                    <div class="outcome-item">
+                        <h4>Reproduction and Herd Structure</h4>
+                        <ul>
+                            <li>Calving rate increased from 30% to over 60%</li>
+                            <li>Market age reduced from 5+ years to under 3 years</li>
+                            <li>Average carcass weight increased by 50kg</li>
+                        </ul>
+                    </div>
+                    <div class="outcome-item">
+                        <h4>Grazing and Nutrition</h4>
+                        <ul>
+                            <li>Supplementary feeding and fodder banks developed</li>
+                            <li>Gut microbiome diversity and digestion efficiency improved</li>
+                            <li>Enteric methane emissions intensity reduced</li>
+                            <li>Carbon sequestration reversed from net loss to 0.8 tCO₂e per hectare per year</li>
+                            <li>Increased biodiversity (vegetation and soil microbiome)</li>
+                        </ul>
+                    </div>
+                    <div class="outcome-item">
+                        <h4>Cattle as a Business</h4>
+                        <ul>
+                            <li>Annual off-take increased from 8% to over 15%</li>
+                            <li>Carcass value increased from ZMW 36/kg to ZMW 54/kg</li>
+                            <li>ZMW 6,500 extra income per animal brought to market</li>
+                            <li>ZMW 25,000 extra income from beef sales per farmer per year</li>
+                            <li>ZMW 355 million extra income per year across full project area</li>
+                        </ul>
+                    </div>
+                    <div class="outcome-item">
+                        <h4>Dual Purpose Genetics</h4>
+                        <ul>
+                            <li>Daily lactation increased from 4 to 8 liters per animal</li>
+                            <li>Lactation period increased from 90 to 200 days per year</li>
+                            <li>ZMW 6,600 from milk sales per farmer per year</li>
+                            <li>2 liters per day can be sold (after calf and household consumption)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MRV Section -->
+            <div class="monitoring-section">
+                <h3 class="monitoring-title">Monitoring, Reporting and Verification (MRV)</h3>
+                <p class="monitoring-text">The BR4RP will employ state-of-the-art environmental monitoring, reporting and verification systems to ensure effective and adaptive management strategies provide maximum environmental benefit to farmers and generate carbon credits with very high environmental integrity.</p>
+                <p class="monitoring-text">The development share of the gross carbon revenue from each project instance will cover all development and ongoing MRV costs for that instance, and the development of additional nature-based revenue streams (e.g., emissions intensity certification and biodiversity credits) and project instances.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">PRO GREEN EARTH</span>
+                    <p>Transforming Livelihoods, Restoring Carbon</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pro Green Earth Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>

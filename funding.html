@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funding - Pro Green Earth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html"><span class="logo-text">PR<img src="progreen_logo.jpg" alt="O" class="logo-image">GREEN EARTH</span></a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="funding.html" class="active">Funding</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Funding & Investment</h1>
+            <p class="page-subtitle">Sustainable Finance for Lasting Impact</p>
+        </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=600&fit=crop" alt="Investment growth">
+                <div class="carousel-caption">
+                    <h3>Investment Opportunity</h3>
+                    <p>$10.2M for transformative change</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200&h=600&fit=crop" alt="Community benefit">
+                <div class="carousel-caption">
+                    <h3>Community Investment</h3>
+                    <p>63% directly benefits communities</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop" alt="Carbon credits">
+                <div class="carousel-caption">
+                    <h3>Carbon Finance</h3>
+                    <p>High integrity carbon removals</p>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Section -->
+    <section class="section funding-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Funding Requirement</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="funding-content">
+                <div class="funding-highlight">
+                    <h3>Initial Investment Required</h3>
+                    <div class="funding-amount">$10.2 Million</div>
+                    <p>To develop the initial project instance of 200,000 hectares</p>
+                </div>
+                
+                <div class="funding-breakdown">
+                    <div class="breakdown-item">
+                        <div class="breakdown-label">Debt Financing</div>
+                        <div class="breakdown-value">$5.0M</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-label">VCU Sales (Carbon Credits)</div>
+                        <div class="breakdown-value">$5.2M</div>
+                    </div>
+                </div>
+
+                <div class="funding-details">
+                    <div class="detail-card">
+                        <h4>Direct Community Benefit</h4>
+                        <p>The budget includes approximately <strong>$7.5 million (63% of total)</strong> for activities that directly benefit communities over the first 5 years.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Benefit Sharing Mechanism</h4>
+                        <p>Based on gross carbon revenue: Barotse Royal Establishment receives <strong>5%</strong>, Government of Zambia receives <strong>5%</strong>, and the remaining <strong>90%</strong> is reinvested in the project and communities.</p>
+                    </div>
+                </div>
+
+                <div class="integrity-section">
+                    <h3>High Integrity Net Carbon Removals</h3>
+                    <div class="integrity-grid">
+                        <div class="integrity-card">
+                            <h4>Social Integrity</h4>
+                            <p>Regenerative agriculture carbon removals offer an advantage over conservation or reforestation, as carbon is sequestered through a non-competing land use that simultaneously enhances food production. The co-design and development strategy ensures social safeguarding, efficient implementation, and equitable benefit sharing.</p>
+                        </div>
+                        <div class="integrity-card">
+                            <h4>Environmental Integrity</h4>
+                            <p>The same activities that generate carbon removals simultaneously create significant socio-economic benefits, increasing the likelihood of long-term practice adoption and carbon sequestration permanence. Leakage risk is minimal, as these activities enhance rather than displace existing livelihoods.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Section -->
+                <div class="timeline-section">
+                    <h3>Development Timeline</h3>
+                    <p class="timeline-subtitle">Initial instance (200,000ha) development timeline to first carbon credit issuance</p>
+                    <div class="timeline-info">
+                        <p>The project follows a structured development approach to ensure financial self-sustainability through ongoing VCU sales. Livestock production co-benefit costs equate to roughly half the total budget, making the project highly suitable for development finance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">PRO GREEN EARTH</span>
+                    <p>Transforming Livelihoods, Restoring Carbon</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pro Green Earth Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>

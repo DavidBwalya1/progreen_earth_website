@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Pro Green Earth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html"><span class="logo-text">PR<img src="progreen_logo.jpg" alt="O" class="logo-image">GREEN EARTH</span></a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="funding.html">Funding</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">About the Project</h1>
+            <p class="page-subtitle">Transforming Livelihoods and Restoring Carbon</p>
+        </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&h=600&fit=crop" alt="Rangeland landscape">
+                <div class="carousel-caption">
+                    <h3>Western Province Rangelands</h3>
+                    <p>1.2 million hectares of restoration potential</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1200&h=600&fit=crop" alt="Cattle grazing">
+                <div class="carousel-caption">
+                    <h3>Sustainable Livestock Production</h3>
+                    <p>Improving cattle health and productivity</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&h=600&fit=crop" alt="Community farming">
+                <div class="carousel-caption">
+                    <h3>Community Empowerment</h3>
+                    <p>Building capacity and resilience</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&h=600&fit=crop" alt="Green landscape">
+                <div class="carousel-caption">
+                    <h3>Environmental Restoration</h3>
+                    <p>Enhancing biodiversity and carbon sequestration</p>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section vision-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Vision</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="vision-content">
+                <p class="vision-text">
+                    The Barotse Rangelands for Restoration Project (BR4RP) aims to drive systemic change and foster regenerative livelihoods within Zambia's Western Province. By implementing improved livestock production and rangeland management programs across 1.2 million hectares, the project will enhance ecosystem biodiversity, increase soil carbon sequestration, and reduce greenhouse gas emissions, improving the resilience of landscapes and food systems to climate change.
+                </p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Enhance Livelihoods</h3>
+                    <p>Implement sustainable rangeland management practices to increase livestock productivity, improve food security and enhance income generation opportunities for communities.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Environmental Restoration</h3>
+                    <p>Improve soil health, biodiversity conservation, and water retention through holistic rangeland management strategies that mitigate land degradation.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Climate Resilience</h3>
+                    <p>Build community resilience to climate change impacts through climate-smart agricultural approaches, including livestock and crop integration, fodder development, and water harvesting.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">📈</div>
+                    <h3>Economic Growth</h3>
+                    <p>Diversify income sources through development of sustainable value chains for forest and agricultural commodities, promoting alternative livelihoods and economic empowerment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Area -->
+    <section class="section area-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Area</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="area-content">
+                <p>The project area includes <strong>Mongu, Limilunga, Nalolo, Senanaga and Sioma</strong> districts in Zambia's Western Province, spanning <strong>1.2 million hectares</strong>.</p>
+                <div class="area-info">
+                    <div class="info-box">
+                        <h4>The Challenge</h4>
+                        <p>The cattle population of Western Province has decreased from more than 700,000 in 2006 to less than 450,000 in 2022, due to lack of capacity, access to inputs and markets, leading to poor economic outcomes and little incentive to manage rangelands.</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>The Opportunity</h4>
+                        <p>The Barotse people, with their strong cultural and historical affinity to cattle, are central to this project. BR4RP will co-design and co-develop rangeland management and livestock production activities alongside farming communities and the Barotse Royal Establishment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">PRO GREEN EARTH</span>
+                    <p>Transforming Livelihoods, Restoring Carbon</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pro Green Earth Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>

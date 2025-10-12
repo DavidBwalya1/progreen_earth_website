@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Pro Green Earth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html"><span class="logo-text">PR<img src="progreen_logo.jpg" alt="O" class="logo-image">GREEN EARTH</span></a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="activities.html" class="active">Activities</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="funding.html">Funding</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Project Activities</h1>
+            <p class="page-subtitle">Comprehensive Approach to Rangeland Restoration</p>
+        </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&h=600&fit=crop" alt="Rangeland management">
+                <div class="carousel-caption">
+                    <h3>Rangeland Management</h3>
+                    <p>Strategic grazing and fire management</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&h=600&fit=crop" alt="Training session">
+                <div class="carousel-caption">
+                    <h3>Capacity Building</h3>
+                    <p>Technical training and demonstration farms</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=1200&h=600&fit=crop" alt="Livestock care">
+                <div class="carousel-caption">
+                    <h3>Livestock Production</h3>
+                    <p>Improving health, breeding, and nutrition</p>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Activities -->
+    <section class="section activities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Activities</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <div class="activity-icon">🌿</div>
+                        <h3>Rangeland Management</h3>
+                    </div>
+                    <ul class="activity-list">
+                        <li>Provide soil and vegetation monitoring data for participatory land-use planning</li>
+                        <li>Deploy improved, strategic approaches to fire and grazing management</li>
+                        <li>Implement water harvesting techniques and restore community water points</li>
+                        <li>Design communal grazing structures and night kraals with solar technology</li>
+                        <li>Create farmer fodder banks</li>
+                        <li>Establish bio-digestors for improved manure management</li>
+                    </ul>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <div class="activity-icon">🎓</div>
+                        <h3>Capacity Building</h3>
+                    </div>
+                    <ul class="activity-list">
+                        <li>Build capacity through technical training and demonstration farms</li>
+                        <li>Develop additional livelihoods (complementary and circular economy-focused)</li>
+                        <li>Integrate sustainable behaviour change incentives</li>
+                        <li>Increase business management capacity</li>
+                        <li>Leverage additional resources from development partners</li>
+                        <li>Deepen governance capacity building for effective benefit sharing</li>
+                    </ul>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <div class="activity-icon">🐮</div>
+                        <h3>Livestock Production</h3>
+                    </div>
+                    <ul class="activity-list">
+                        <li>Improve extension services, inputs and information (disease testing, vaccines, training, SMS system)</li>
+                        <li>Enhance breeding (timing synchronization, AI, dual-purpose genetics, bull replacement)</li>
+                        <li>Establish traceability (electronic ID, ear tagging and ownership certificates)</li>
+                        <li>Strengthen nutrition (protein, transition, and phosphate licks, silvopasture development)</li>
+                        <li>Implement a Regenerative Dairy Ranching model (dual incomes)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Environmental Monitoring -->
+            <div class="monitoring-section">
+                <h3 class="monitoring-title">Environmental Monitoring & Verification</h3>
+                <p class="monitoring-text">
+                    The BR4RP will employ state of the art environmental monitoring, reporting and verification systems, to ensure effective and adaptive management strategies provide maximum environmental benefit to farmers, and generate carbon credits with very high environmental integrity.
+                </p>
+                <p class="monitoring-text">
+                    The development share of the gross carbon revenue from each project instance will cover all development and ongoing MRV costs for that instance, and the development of additional nature based revenue streams (e.g. emissions intensity certification and biodiversity credits) and project instances.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">PRO GREEN EARTH</span>
+                    <p>Transforming Livelihoods, Restoring Carbon</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pro Green Earth Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>
