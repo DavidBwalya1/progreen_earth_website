@@ -139,18 +139,18 @@ body {
 .nav-links a::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    transition: left 0.3s ease;
-    z-index: -1;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-green);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .nav-links a:hover::before,
 .nav-links a.active::before {
-    left: 0;
+    width: 80%;
 }
 
 .nav-links a:hover,
