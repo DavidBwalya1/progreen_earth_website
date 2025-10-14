@@ -101,17 +101,22 @@ class Chatbot {
         const chatbotHTML = `
             <div class="chatbot-container">
                 <button class="chatbot-button" id="chatbotToggle">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-                        <circle cx="8" cy="10" r="1.5"/>
-                        <circle cx="12" cy="10" r="1.5"/>
-                        <circle cx="16" cy="10" r="1.5"/>
-                    </svg>
+                    <div class="chat-pulse"></div>
+                    <img src="cowboy.jpg" alt="Chat Assistant" class="chatbot-avatar" />
+                    <div class="chat-icon-badge">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                            <circle cx="8" cy="10" r="1.5"/>
+                            <circle cx="12" cy="10" r="1.5"/>
+                            <circle cx="16" cy="10" r="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="chat-tooltip">Hi! Let's talk 👋</div>
                 </button>
                 
                 <div class="chatbot-window" id="chatbotWindow">
                     <div class="chatbot-header">
-                        <h3>Pro Green Earth</h3>
+                        <h3>Pro Green Earth Assistant</h3>
                         <button class="chatbot-close" id="chatbotClose">&times;</button>
                     </div>
                     
