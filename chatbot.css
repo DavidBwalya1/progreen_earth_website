@@ -444,14 +444,70 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .chatbot-window {
-        width: calc(100vw - 40px);
-        height: 450px;
-        right: 20px;
+    .chatbot-container {
+        right: 15px;
+        bottom: 15px;
+        z-index: 9999;
     }
     
-    .chatbot-container {
-        right: 20px;
-        bottom: 20px;
+    .chatbot-button {
+        width: 70px;
+        height: 70px;
+        border: 2px solid #fff;
+    }
+    
+    .chatbot-avatar {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    .chat-icon-badge {
+        width: 24px;
+        height: 24px;
+        bottom: -1px;
+        right: -1px;
+    }
+    
+    .chat-icon-badge svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .chat-tooltip {
+        bottom: 75px;
+        right: 0;
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+    
+    .chat-pulse {
+        display: block;
+    }
+    
+    .chatbot-window {
+        width: calc(100vw - 30px);
+        height: 500px;
+        right: 15px;
+        bottom: 95px;
+    }
+    
+    .chatbot-button::before {
+        font-size: 16px;
+        top: -8px;
+        right: -8px;
+    }
+    
+    /* Reduce animations on mobile for better performance */
+    .chatbot-button {
+        animation: welcomeBounce 5s ease-in-out infinite;
+    }
+    
+    .chatbot-avatar {
+        animation: wave 4s ease-in-out infinite;
+    }
+    
+    .chat-pulse {
+        animation: pulse 3s infinite;
     }
 }
