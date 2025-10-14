@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://davidbwalya1.github.io/progreen_earth_website/sitemap.xml
+
+# Disallow certain files
+Disallow: /chatbot.js
+Disallow: /chatbot.css
+Disallow: /script.js
+Disallow: /carousel.js
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
