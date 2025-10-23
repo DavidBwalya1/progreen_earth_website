@@ -979,10 +979,10 @@ img {
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        top: 56px;
+        top: 1cm;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 56px);
+        height: calc(100vh - 1cm);
         background-color: var(--primary-green);
         flex-direction: column;
         align-items: center;
@@ -1012,9 +1012,9 @@ img {
         background: #ffffff;
     }
     
-    /* Smaller, tidy logo on mobile */
+    /* Smaller, tidy logo on mobile to fit a 1cm navbar */
     .logo-image {
-        height: 3.5rem;
+        height: 0.7cm;
         transform: none;
     }
     
@@ -1952,10 +1952,12 @@ img {
     /* Navigation - Mobile First */
     .navbar {
         padding: 0;
+        height: 1cm;
     }
     
     .nav-content {
-        padding: 0.5rem var(--spacing-sm);
+        padding: 0 0.5rem;
+        min-height: 1cm;
     }
     
     .logo-text {
@@ -1965,25 +1967,24 @@ img {
     .hamburger {
         display: flex;
         z-index: 1001;
+        height: 1cm;
+        align-items: center;
     }
     
     .nav-links {
         position: fixed;
-        top: 75px;
-        right: -100%;
-        height: auto;
-        max-height: calc(100vh - 90px);
-        width: 280px;
+        top: 1cm;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 1cm);
         background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+        padding: 1.5rem 1rem;
+        border-radius: 0;
+        display: flex;
         flex-direction: column;
-        padding: 1rem 0;
-        gap: 0.3rem;
-        transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        box-shadow: -8px 8px 30px rgba(0, 0, 0, 0.3);
-        overflow-y: auto;
-        z-index: 999;
-        border-radius: 12px 0 0 12px;
-        border: 2px solid rgba(255, 255, 255, 0.1);
+        gap: 0.25rem;
+        transition: left 0.3s ease;
+        z-index: 1000;
         border-right: none;
         position: relative;
     }
@@ -2004,7 +2005,7 @@ img {
     }
     
     .nav-links.active {
-        right: 0;
+        left: 0;
     }
     
     .nav-links li {
