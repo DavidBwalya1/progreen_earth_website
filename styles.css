@@ -122,10 +122,13 @@ body {
     filter: none;
     border: none;
     outline: none;
+    transform: scale(1.18);
+    transform-origin: left center;
+    will-change: transform;
 }
 
 .logo:hover .logo-image {
-    transform: scale(1.05);
+    transform: scale(1.22);
     filter: none;
 }
 
@@ -981,6 +984,11 @@ body {
     
     .hamburger {
         display: flex;
+    }
+    
+    /* Keep navbar layout tight on mobile while slightly enlarging logo */
+    .logo-image {
+        transform: scale(1.05);
     }
     
     .hero-title {
