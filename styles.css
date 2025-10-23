@@ -42,6 +42,13 @@ body {
     overflow-x: hidden;
 }
 
+/* Make all images responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -114,7 +121,7 @@ body {
 }
 
 .logo-image {
-    height: 5rem;
+    height: 6.5rem;
     width: auto;
     object-fit: contain;
     display: block;
@@ -211,10 +218,15 @@ body {
 .hamburger span {
     width: 28px;
     height: 3px;
-    background-color: white;
+    background-color: var(--primary-green);
     border-radius: 3px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* When menu is open, make bars white for contrast on green menu */
+.hamburger.active span {
+    background-color: white;
 }
 
 /* Mobile Menu Backdrop */
@@ -257,7 +269,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000');
+    background-image: url('group.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -986,9 +998,23 @@ body {
         display: flex;
     }
     
+    /* Mobile menu link visibility and spacing */
+    .nav-links a {
+        color: #ffffff;
+        font-size: 1.1rem;
+        padding: 0.9rem 1.2rem;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: var(--accent-green);
+    }
+    .nav-links a::before {
+        background: #ffffff;
+    }
+    
     /* Keep navbar layout tight on mobile while slightly enlarging logo */
     .logo-image {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
     
     .hero-title {
