@@ -979,10 +979,10 @@ img {
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        top: 70px;
+        top: 56px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 56px);
         background-color: var(--primary-green);
         flex-direction: column;
         align-items: center;
@@ -1012,9 +1012,10 @@ img {
         background: #ffffff;
     }
     
-    /* Keep navbar layout tight on mobile while slightly enlarging logo */
+    /* Smaller, tidy logo on mobile */
     .logo-image {
-        transform: scale(1.1);
+        height: 3.5rem;
+        transform: none;
     }
     
     .hero-title {
@@ -1954,7 +1955,7 @@ img {
     }
     
     .nav-content {
-        padding: 0.75rem var(--spacing-sm);
+        padding: 0.5rem var(--spacing-sm);
     }
     
     .logo-text {
