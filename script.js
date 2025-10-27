@@ -1,3 +1,58 @@
+// Check if video autoplay is supported
+function checkVideoAutoplay() {
+    const video = document.createElement('video');
+    video.autoplay = true;
+    video.muted = true;
+    video.volume = 0;
+    video.src = 'data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21vb28AAAB1bWxvYwAAAAAAAAARAAABEQAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABpcG9kAAAAAABpcG9uAAAABm1hdGEAAACAbW9vdgAAABxtZnIxAAAAAAAAAAEBAAEAAAABAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA9tZGlhAAAAAQQEBAEAAAD/wbW8EAAAAABsaXZlcnN0cmVhbQ=='; // 1px x 1px transparent video
+    
+    return new Promise((resolve) => {
+        const playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                video.pause();
+                resolve(true);
+            }).catch(() => {
+                resolve(false);
+            });
+        } else {
+            resolve(false);
+        }
+    });
+}
+
+// Initialize video background
+async function initVideoBackground() {
+    const video = document.querySelector('.video-background video');
+    if (!video) return;
+    
+    const canAutoplay = await checkVideoAutoplay();
+    
+    if (!canAutoplay) {
+        // If autoplay is not allowed, show fallback image
+        document.documentElement.classList.add('no-video');
+        
+        // Try to play the video when user interacts with the page
+        const playVideoOnInteraction = () => {
+            video.muted = true;
+            video.play().catch(() => {});
+            document.removeEventListener('click', playVideoOnInteraction);
+            document.removeEventListener('scroll', playVideoOnInteraction);
+            document.removeEventListener('touchstart', playVideoOnInteraction);
+        };
+        
+        document.addEventListener('click', playVideoOnInteraction);
+        document.addEventListener('scroll', playVideoOnInteraction);
+        document.addEventListener('touchstart', playVideoOnInteraction);
+    }
+}
+
+// Initialize video background when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    initVideoBackground();
+});
+
 // Mobile Navigation Toggle with Backdrop
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
