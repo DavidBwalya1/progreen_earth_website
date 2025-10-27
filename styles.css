@@ -269,12 +269,23 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('withcows.jpeg');
+    background-image: url('https://images.unsplash.com/photo-1516467508483-a7212febe31a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
     background-size: cover;
-    background-position: center 30%;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     opacity: 0.9;
     z-index: 0;
+    animation: zoomIn 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
 }
 
 /* Light Overlay for Text Readability */
@@ -286,11 +297,30 @@ img {
     bottom: 0;
     background: linear-gradient(
         135deg,
-        rgba(45, 80, 22, 0.6) 0%,
-        rgba(56, 99, 28, 0.5) 50%,
-        rgba(107, 157, 62, 0.4) 100%
+        rgba(45, 80, 22, 0.7) 0%,
+        rgba(56, 99, 28, 0.6) 50%,
+        rgba(107, 157, 62, 0.5) 100%
     );
     z-index: 1;
+    backdrop-filter: blur(2px);
+}
+
+/* Ensure hero content is properly spaced on mobile */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 80px;
+        min-height: 90vh;
+    }
+    
+    .hero::before {
+        background-attachment: scroll;
+        background-position: 60% center;
+        animation: none;
+    }
+    
+    .hero-content {
+        padding: 0 1.5rem;
+    }
 }
 
 .hero-content {
@@ -977,27 +1007,30 @@ img {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 1cm;
-        left: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: calc(100vh - 1cm);
-        background-color: var(--primary-green);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: var(--spacing-lg) 0;
-        transition: left 0.3s ease;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
+    .navbar {
+        padding: 0.5rem 0;
+        height: auto;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .nav-links.active {
-        left: 0;
+
+    .nav-content {
+        padding: 0.5rem 1rem;
+        flex-wrap: wrap;
     }
-    
+
+    .logo {
+        order: 1;
+        flex: 1;
+    }
+
+    .logo-image {
+        height: 4rem;
+        transform: scale(1);
+    }
+
     .hamburger {
+        order: 2;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1019,6 +1052,7 @@ img {
     
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
+        background-color: white;
     }
     
     .hamburger.active span:nth-child(2) {
@@ -1028,24 +1062,48 @@ img {
     
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
+        background-color: white;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--primary-green);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 0 2rem;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        margin: 0;
     }
     
-    /* Mobile menu link visibility and spacing */
+    .nav-links.active {
+        left: 0;
+    }
+    
     .nav-links a {
         color: #ffffff;
         font-size: 1.1rem;
-        padding: 0.9rem 1.5rem;
+        padding: 1rem 2rem;
         width: 100%;
         display: block;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .nav-links a:hover {
         background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 2.5rem;
     }
-    .nav-links a:hover,
+    
     .nav-links a.active {
         color: var(--accent-green);
+        font-weight: 600;
     }
     .nav-links a::before {
         background: #ffffff;
