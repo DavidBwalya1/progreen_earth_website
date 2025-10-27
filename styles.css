@@ -269,11 +269,11 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('group.jpeg');
+    background-image: url('withcows.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;
     background-repeat: no-repeat;
-    opacity: 1;
+    opacity: 0.9;
     z-index: 0;
 }
 
@@ -286,9 +286,9 @@ img {
     bottom: 0;
     background: linear-gradient(
         135deg,
-        rgba(45, 80, 22, 0.4) 0%,
-        rgba(56, 99, 28, 0.35) 50%,
-        rgba(107, 157, 62, 0.3) 100%
+        rgba(45, 80, 22, 0.6) 0%,
+        rgba(56, 99, 28, 0.5) 50%,
+        rgba(107, 157, 62, 0.4) 100%
     );
     z-index: 1;
 }
@@ -981,13 +981,16 @@ img {
         position: fixed;
         top: 1cm;
         left: -100%;
-        width: 100%;
+        width: 80%;
+        max-width: 300px;
         height: calc(100vh - 1cm);
         background-color: var(--primary-green);
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         padding: var(--spacing-lg) 0;
         transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
     
     .nav-links.active {
@@ -996,13 +999,49 @@ img {
     
     .hamburger {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1001;
+        position: relative;
+    }
+    
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--primary-green);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
     
     /* Mobile menu link visibility and spacing */
     .nav-links a {
         color: #ffffff;
         font-size: 1.1rem;
-        padding: 0.9rem 1.2rem;
+        padding: 0.9rem 1.5rem;
+        width: 100%;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
     .nav-links a:hover,
     .nav-links a.active {
