@@ -930,6 +930,33 @@ button, .button, .btn, .cta-button {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.approval-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 1.1rem 2.2rem;
+    border-radius: 50px;
+    margin: 0.6rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.approval-badge:hover {
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    border-color: var(--accent-green);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
 .contact-section {
     background: var(--cream);
 }
@@ -959,11 +986,13 @@ button, .button, .btn, .cta-button {
     font-size: 2rem;
 }
 
-.contact-item h4 {
+.metric-label {
     font-size: 1.1rem;
-    color: var(--primary-green);
-    margin-bottom: 0.3rem;
-    font-weight: 700;
+    color: var(--dark-text);
+    margin: 0.5rem 0;
+    font-weight: 600;
+    width: 100%;
+    line-height: 1.4;
 }
 
 .contact-item a {
@@ -1477,6 +1506,59 @@ button, .button, .btn, .cta-button {
     opacity: 0.9;
 }
 
+/* Why Invest Section */
+.why-invest-section {
+    position: relative;
+    background: url('field2.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 6rem 0;
+    color: white;
+    overflow: hidden;
+}
+
+.why-invest-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.why-invest-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.why-invest-section .section-title,
+.why-invest-section .section-subtitle,
+.why-invest-section .invest-card h3,
+.why-invest-section .invest-card p {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.why-invest-section .title-underline::after {
+    background: white;
+}
+
+.why-invest-section .invest-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--accent-green);
+    transition: all 0.3s ease;
+}
+
+.why-invest-section .invest-card:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-green);
+}
+
 /* Monitoring Section */
 .monitoring-section {
     background: var(--cream);
@@ -1664,8 +1746,15 @@ button, .button, .btn, .cta-button {
     padding: 5rem 0;
 }
 
-.section-header.text-center {
+.section-header.metric-content {
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-header.metric-content {
     max-width: 800px;
     margin: 0 auto 3rem;
 }
@@ -1845,16 +1934,18 @@ button, .button, .btn, .cta-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 1rem 0.5rem;
-    position: relative;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.9);
-    min-height: 120px;
     justify-content: center;
+    padding: 1.8rem 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    height: 100%;
     flex: 1;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .metric-item:hover {
@@ -1862,15 +1953,14 @@ button, .button, .btn, .cta-button {
 }
 
 .metric-value {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     color: var(--primary-green);
-    line-height: 1.2;
-    margin-bottom: 0.25rem;
-    line-height: 1.2;
     margin-bottom: 0.8rem;
     position: relative;
-    display: inline-block;
+    display: block;
+    line-height: 1.2;
+    width: 100%;
 }
 
 .metric-value::after {
@@ -1883,6 +1973,7 @@ button, .button, .btn, .cta-button {
     height: 3px;
     background: var(--accent-green);
     border-radius: 3px;
+}
 }
 
 .metric-content {
@@ -2025,16 +2116,17 @@ button, .button, .btn, .cta-button {
 }
 
 /* Why Invest Section */
-.why-invest-section {
+.approvals-showcase {
     position: relative;
-    background: url('garden.jpg.png') no-repeat center center;
+    background: url('fruites.png') no-repeat center center;
     background-size: cover;
     padding: 5rem 0;
     overflow: hidden;
     color: white;
+    z-index: 1;
 }
 
-.why-invest-section::before {
+.approvals-showcase::before {
     content: '';
     position: absolute;
     top: 0;
@@ -2045,24 +2137,24 @@ button, .button, .btn, .cta-button {
     z-index: 1;
 }
 
-.why-invest-section .container {
+.approvals-showcase .container {
     position: relative;
     z-index: 2;
 }
 
-.why-invest-section .section-title,
-.why-invest-section .section-subtitle,
-.why-invest-section .invest-card h3,
-.why-invest-section .invest-card p {
+.approvals-showcase .section-title,
+.approvals-showcase .section-subtitle,
+.approvals-showcase .invest-card h3,
+.approvals-showcase .invest-card p {
     color: white;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.why-invest-section .title-underline::after {
+.approvals-showcase .title-underline::after {
     background: white;
 }
 
-.why-invest-section .invest-card {
+.approvals-showcase .invest-card {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2733,15 +2825,21 @@ button, .button, .btn, .cta-button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
     z-index: 1;
+    backdrop-filter: blur(1px);
 }
 
 .approvals-showcase h3 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: var(--spacing-lg);
-    font-weight: 700;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 3;
+    padding: 0 1rem;
 }
 
 .approvals-list {
