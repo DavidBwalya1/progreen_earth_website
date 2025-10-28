@@ -152,10 +152,6 @@
                     <div class="investment-image-wrapper">
                         <img src="meeting.jpg" alt="Investment discussion meeting" class="investment-image">
                         <div class="image-overlay"></div>
-                        <div class="image-badge">
-                            <i class="fas fa-handshake"></i>
-                            <span>Partner With Us</span>
-                        </div>
                     </div>
                 </div>
                 <div class="investment-content">
@@ -195,7 +191,12 @@
                         </div>
                     </div>
                     
-                    <a href="funding.html" class="btn btn-primary">Learn More About Investing</a>
+                    <div class="cta-button-container">
+                        <a href="funding.html" class="cta-button">
+                            <span class="cta-text">Learn More About Investing</span>
+                            <span class="cta-icon">→</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,36 +210,72 @@
                 <div class="title-underline"></div>
             </div>
             
-            <div class="why-invest-grid">
-                <div class="invest-card">
-                    <div class="invest-number">01</div>
-                    <h3>Proven Leadership</h3>
-                    <p>Led by experienced professionals with 30+ years in Zambian agriculture, 13+ years in agricultural consulting, and 10+ years in climate finance. Track record of impacting 8,000+ smallholder farmers.</p>
+            <div class="investment-container">
+                <div class="investment-content">
+                    <div class="why-invest-grid">
+                        <div class="invest-card">
+                            <div class="invest-number">01</div>
+                            <h3>Proven Leadership</h3>
+                            <p>Led by experienced professionals with 30+ years in Zambian agriculture, 13+ years in agricultural consulting, and 10+ years in climate finance. Track record of impacting 8,000+ smallholder farmers.</p>
+                        </div>
+                        <div class="invest-card">
+                            <div class="invest-number">02</div>
+                            <h3>Government & Royal Support</h3>
+                            <p>Full backing from the Barotse Royal Establishment, Ministry of Livestock and Fisheries, and Ministry of Green Economy and Environment. All necessary approvals secured.</p>
+                        </div>
+                        <div class="invest-card">
+                            <div class="invest-number">03</div>
+                            <h3>High-Integrity Carbon Credits</h3>
+                            <p>Regenerative agriculture carbon removals with strong social and environmental integrity. Non-competing land use that enhances food production while sequestering carbon.</p>
+                        </div>
+                        <div class="invest-card">
+                            <div class="invest-number">04</div>
+                            <h3>Scalable Model</h3>
+                            <p>Initial 200,000 hectares with potential to scale to 1.2 million hectares. Proven co-design approach ensures community buy-in and long-term sustainability.</p>
+                        </div>
+                        <div class="invest-card">
+                            <div class="invest-number">05</div>
+                            <h3>Multiple Revenue Streams</h3>
+                            <p>Carbon credit sales (VCUs), improved livestock productivity, dairy production, and potential for biodiversity credits and emissions intensity certification.</p>
+                        </div>
+                        <div class="invest-card">
+                            <div class="invest-number">06</div>
+                            <h3>Measurable Impact</h3>
+                            <p>State-of-the-art MRV systems ensure transparent reporting. $3.3M annual income increase for farmers, 34M tons CO₂ sequestered over 40 years, and restored ecosystems.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="invest-card">
-                    <div class="invest-number">02</div>
-                    <h3>Government & Royal Support</h3>
-                    <p>Full backing from the Barotse Royal Establishment, Ministry of Livestock and Fisheries, and Ministry of Green Economy and Environment. All necessary approvals secured.</p>
+                <div class="investment-image-container">
+                    <div class="investment-image-wrapper">
+                        <img src="green.jpg" alt="Proven Leadership" class="investment-image">
+                        <div class="image-overlay"></div>
+                    </div>
                 </div>
-                <div class="invest-card">
-                    <div class="invest-number">03</div>
-                    <h3>High-Integrity Carbon Credits</h3>
-                    <p>Regenerative agriculture carbon removals with strong social and environmental integrity. Non-competing land use that enhances food production while sequestering carbon.</p>
-                </div>
-                <div class="invest-card">
-                    <div class="invest-number">04</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Highlights Section -->
+    <section class="section highlights-section">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-number">04</div>
                     <h3>Scalable Model</h3>
                     <p>Initial 200,000 hectares with potential to scale to 1.2 million hectares. Proven co-design approach ensures community buy-in and long-term sustainability.</p>
+                    <div class="highlight-icon"></div>
                 </div>
-                <div class="invest-card">
-                    <div class="invest-number">05</div>
+                <div class="highlight-card">
+                    <div class="highlight-number">05</div>
                     <h3>Multiple Revenue Streams</h3>
                     <p>Carbon credit sales (VCUs), improved livestock productivity, dairy production, and potential for biodiversity credits and emissions intensity certification.</p>
+                    <div class="highlight-icon"></div>
                 </div>
-                <div class="invest-card">
-                    <div class="invest-number">06</div>
+                <div class="highlight-card">
+                    <div class="highlight-number">06</div>
                     <h3>Measurable Impact</h3>
                     <p>State-of-the-art MRV systems ensure transparent reporting. $3.3M annual income increase for farmers, 34M tons CO₂ sequestered over 40 years, and restored ecosystems.</p>
+                    <div class="highlight-icon"></div>
                 </div>
             </div>
         </div>
@@ -342,19 +379,35 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="section cta-section">
+    <section class="section cta-section" aria-labelledby="cta-heading">
+        <div class="cta-overlay"></div>
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Make an Impact?</h2>
-                <p>Join us in transforming livelihoods, restoring ecosystems, and generating sustainable returns through regenerative agriculture.</p>
-                <div class="cta-buttons">
-                    <a href="funding.html" class="cta-button primary">View Investment Details</a>
-                    <a href="contact.html" class="cta-button secondary">Schedule a Meeting</a>
+                <div class="cta-text">
+                    <span class="section-subtitle">Join Our Mission</span>
+                    <h2 id="cta-heading">Ready to Make a Lasting Impact?</h2>
+                    <p class="cta-description">Partner with us to transform rural livelihoods, restore vital ecosystems, and generate sustainable returns through innovative regenerative agriculture solutions in Zambia's Western Province.</p>
+                    <div class="cta-buttons">
+                        <a href="funding.html" class="cta-button primary" aria-label="View detailed investment opportunities">
+                            <span>View Investment Details</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cta-icon">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                        <a href="contact.html" class="cta-button secondary" aria-label="Schedule a meeting with our team">
+                            <span>Schedule a Meeting</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cta-icon">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="cta-stats">
                     <div class="cta-stat">
                         <strong>$3.3M</strong>
-                        <span>Annual farmer income increase</span>
+                        <span>Annual Income Increase</span>
                     </div>
                     <div class="cta-stat">
                         <strong>34M tons</strong>
@@ -379,17 +432,17 @@
             
             <div class="endorsements-grid">
                 <div class="endorsement-card">
-                    <div class="endorsement-logo">👑</div>
+                    <div class="endorsement-logo"></div>
                     <h4>Barotse Royal Establishment</h4>
                     <p>Project conceived at the request of His Majesty the Litunga, King of the Barotse people, with full royal backing and community support.</p>
                 </div>
                 <div class="endorsement-card">
-                    <div class="endorsement-logo">🏛️</div>
+                    <div class="endorsement-logo"></div>
                     <h4>Government of Zambia</h4>
                     <p>Full support from Ministry of Livestock and Fisheries, and Ministry of Green Economy and Environment.</p>
                 </div>
                 <div class="endorsement-card">
-                    <div class="endorsement-logo">🌍</div>
+                    <div class="endorsement-logo"></div>
                     <h4>International Partners</h4>
                     <p>Track record with USAID, FCDO, EU, Conservation International, and other leading development organizations.</p>
                 </div>
@@ -421,19 +474,19 @@
                 
                 <div class="contact-options">
                     <div class="contact-option-card">
-                        <div class="contact-icon-large">📧</div>
+                        <div class="contact-icon-large"></div>
                         <h4>Email Us</h4>
                         <a href="mailto:renier@progreenearth.africa" class="contact-link">renier@progreenearth.africa</a>
                     </div>
                     
                     <div class="contact-option-card">
-                        <div class="contact-icon-large">📱</div>
+                        <div class="contact-icon-large"></div>
                         <h4>Call Us</h4>
                         <a href="tel:+260968493432" class="contact-link">+260 96 849 3432</a>
                     </div>
                     
                     <div class="contact-option-card">
-                        <div class="contact-icon-large">📅</div>
+                        <div class="contact-icon-large"></div>
                         <h4>Schedule Meeting</h4>
                         <a href="contact.html" class="contact-link">Contact Page</a>
                     </div>

@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Counter animation for stats
-function animateCounter(element, target, duration = 2000) {
+function animateCounter(element, target, isDollar = false, duration = 2000) {
     const start = 0;
     const increment = target / (duration / 16);
     let current = start;
@@ -207,10 +207,10 @@ function animateCounter(element, target, duration = 2000) {
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-            element.textContent = formatNumber(target);
+            element.textContent = (isDollar ? '$' : '') + formatNumber(target);
             clearInterval(timer);
         } else {
-            element.textContent = formatNumber(Math.floor(current));
+            element.textContent = (isDollar ? '$' : '') + formatNumber(Math.floor(current));
         }
     }, 16);
 }
@@ -231,7 +231,9 @@ const heroObserver = new IntersectionObserver((entries) => {
             const statNumbers = document.querySelectorAll('.stat-number');
             const values = [1200000, 3300000, 34000000];
             statNumbers.forEach((stat, index) => {
-                animateCounter(stat, values[index]);
+                // Check if this is the income stat (which should have a dollar sign)
+                const isIncomeStat = stat.textContent.includes('$');
+                animateCounter(stat, values[index], isIncomeStat);
             });
             heroObserver.unobserve(entry.target);
         }
