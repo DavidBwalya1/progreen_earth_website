@@ -1,0 +1,197 @@
+.impact-hero {
+    position: relative;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center 22%;
+    color: white;
+    overflow: hidden;
+    margin-top: -105px;
+}
+
+.impact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.5) 35%,
+        rgba(0, 0, 0, 0.5) 65%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+.impact-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: calc(105px + var(--spacing-xl));
+    padding-bottom: var(--spacing-xl);
+}
+
+.impact-hero-copy {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-xl) * 1.2);
+}
+
+.impact-hero-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.impact-hero-topline {
+    margin-bottom: var(--spacing-sm);
+}
+
+.impact-hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--accent-green);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+}
+
+.impact-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    letter-spacing: -0.01em;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.impact-hero-title .title-line {
+    display: block;
+}
+
+.impact-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing-lg) * 1.2);
+}
+
+.impact-hero-lead {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.impact-hero-ctas {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+}
+
+.impact-hero-ctas .cta-button {
+    min-width: 180px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.impact-hero-ctas .cta-button .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.impact-hero-ctas .cta-button:hover .arrow {
+    transform: translateX(4px);
+}
+
+.impact-hero-ctas .cta-button.secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    color: white;
+}
+
+.impact-hero-ctas .cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .impact-hero-title {
+        font-size: 3.2rem;
+        max-width: 800px;
+    }
+    
+    .impact-hero-lead {
+        font-size: 1.2rem;
+        padding: 0 var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .impact-hero {
+        height: 650px;
+        margin-top: -75px;
+    }
+
+    .impact-hero-inner {
+        padding-top: calc(90px + var(--spacing-lg));
+    }
+    
+    .impact-hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .impact-hero-lead {
+        font-size: 1.1rem;
+        padding: 0 var(--spacing-sm);
+        max-width: 600px;
+    }
+    
+    .impact-hero-ctas {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        width: 100%;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .impact-hero-ctas .cta-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .impact-hero-title {
+        font-size: 2.4rem;
+    }
+    
+    .impact-hero-lead {
+        font-size: 1.05rem;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .impact-hero-header {
+        margin-top: var(--spacing-lg);
+    }
+}

@@ -111,7 +111,7 @@ class Chatbot {
                             <circle cx="16" cy="10" r="1.5"/>
                         </svg>
                     </div>
-                    <div class="chat-tooltip">Hi! Let's talk 👋</div>
+                    <div class="chat-tooltip">Pro Green Earth Assistant</div>
                 </button>
                 
                 <div class="chatbot-window" id="chatbotWindow">

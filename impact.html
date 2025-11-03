@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impact - Pro Green Earth</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="impact-hero-new.css">
+    <link rel="stylesheet" href="metrics-overlay.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,133 +40,155 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Impact Hero -->
+    <section class="impact-hero" style="background-image: url('hugerangeland.jpg');">
+        <div class="impact-hero-overlay"></div>
         <div class="container">
-            <h1 class="page-title">Project Impact</h1>
-            <p class="page-subtitle">Creating Lasting Change for Communities and Environment</p>
+            <div class="impact-hero-inner">
+                <div class="impact-hero-copy">
+                    <div class="impact-hero-header">
+                        <div class="impact-hero-topline">
+                            <p class="eyebrow">Impact</p>
+                        </div>
+                        <h1 class="impact-hero-title">
+                            <span class="title-line">Delivering measurable benefits for people and planet</span>
+                        </h1>
+                    </div>
+                    <div class="impact-hero-content">
+                        <p class="impact-hero-lead">
+                            We combine community-led rangeland restoration, livestock 
+                            productivity interventions and rigorous monitoring to create 
+                            resilient landscapes, stronger rural livelihoods and 
+                            high-integrity carbon removals.
+                        </p>
+                        <div class="impact-hero-ctas">
+                            <a href="funding.html" class="cta-button primary">Partner with us</a>
+                            <a href="#metrics" class="cta-button secondary">View metrics <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Image Carousel -->
-    <section class="carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="withcows.jpeg" alt="Healthy cattle">
-                <div class="carousel-caption">
-                    <h3>Improved Cattle Production</h3>
-                    <p>$3.3 million annual income increase for farmers</p>
+    <!-- Key metrics -->
+    <section id="metrics" class="section impact-metrics">
+        <div class="container">
+            <div class="metrics-wrapper">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <img src="hugerangeland.jpg" alt="Aerial view of rangeland" loading="lazy" class="metric-image">
+                        <div class="metric-overlay"></div>
+                        <div class="metric-content">
+                            <div class="metric-value" data-value="1.2">1.2M</div>
+                            <div class="metric-label">Hectares under management</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <img src="soil.jpeg" alt="Soil restoration" loading="lazy" class="metric-image">
+                        <div class="metric-overlay"></div>
+                        <div class="metric-content">
+                            <div class="metric-value" data-value="34">34M tCO₂e</div>
+                            <div class="metric-label">Projected removals (40 yrs)</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <img src="withcows.jpeg" alt="Farmers with livestock" loading="lazy" class="metric-image">
+                        <div class="metric-overlay"></div>
+                        <div class="metric-content">
+                            <div class="metric-value" data-value="3.3">$3.3M</div>
+                            <div class="metric-label">Annual uplift to farmers</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="field.jpeg" alt="Green pastures">
-                <div class="carousel-caption">
-                    <h3>Restored Rangelands</h3>
-                    <p>Healthier ecosystems and reduced degradation</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="soil.jpeg" alt="Clean environment">
-                <div class="carousel-caption">
-                    <h3>Carbon Sequestration</h3>
-                    <p>34 million tons CO₂ over 40 years</p>
-                </div>
-            </div>
-            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
         </div>
     </section>
 
     <!-- Impact Highlights -->
-    <section class="section impact-section">
+    <section class="section impact-highlights">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Impact Highlights</h2>
+                <h2 class="section-title">What we deliver</h2>
                 <div class="title-underline"></div>
             </div>
-            
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="impact-icon">🐄</div>
-                    <h3>Improved Cattle Production</h3>
-                    <p>Enhance cattle production and increase the value of livestock products in the region. By addressing key challenges in animal health, feeding, breeding, and market access, farmers can achieve higher productivity and better prices, raising farmer incomes by an estimated <strong>$3.3 million each year</strong>.</p>
-                </div>
-                
-                <div class="impact-card">
-                    <div class="impact-icon">🌾</div>
-                    <h3>Restore Degraded Rangelands</h3>
-                    <p>Restore degraded rangelands focusing on improving pasture quality, increase forage availability, and support more productive and sustainable livestock systems. These improvements contribute to healthier ecosystems, reduced land degradation, and greater resilience to climate shocks.</p>
-                </div>
-                
-                <div class="impact-card">
-                    <div class="impact-icon">💨</div>
-                    <h3>Carbon Sequestration</h3>
-                    <p>Over <strong>34 million tons of carbon dioxide equivalent</strong> could be sequestered over 40 years, with average annual net carbon removals of 0.8 tons CO₂e per hectare across project areas.</p>
-                </div>
+
+            <div class="highlights-grid">
+                <article class="highlight-card">
+                    <h3>Regenerative grazing</h3>
+                    <p>Community-led grazing reforms and rotational systems that restore pasture productivity and increase resilience to drought.</p>
+                </article>
+                <article class="highlight-card">
+                    <h3>Livestock productivity</h3>
+                    <p>Veterinary support, improved genetics and market access which translate into higher incomes and reduced losses.</p>
+                </article>
+                <article class="highlight-card">
+                    <h3>Carbon integrity</h3>
+                    <p>MRV systems ensure removals are quantified, auditable and aligned with recognised carbon accounting frameworks.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes (compact grid) -->
+    <section class="section impact-outcomes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Expected outcomes</h2>
+                <div class="title-underline"></div>
             </div>
 
-            <!-- Expected Outcomes -->
-            <div class="outcomes-section">
-                <h3 class="outcomes-title">Expected Outcomes</h3>
-                <div class="outcomes-grid">
-                    <div class="outcome-item">
-                        <h4>Disease and Mortality</h4>
-                        <ul>
-                            <li>Liver condemnation reduced from 80% to less than 15%</li>
-                            <li>Average mortality rates reduced from 10% to 5%</li>
-                        </ul>
-                    </div>
-                    <div class="outcome-item">
-                        <h4>Reproduction and Herd Structure</h4>
-                        <ul>
-                            <li>Calving rate increased from 30% to over 60%</li>
-                            <li>Market age reduced from 5+ years to under 3 years</li>
-                            <li>Average carcass weight increased by 50kg</li>
-                        </ul>
-                    </div>
-                    <div class="outcome-item">
-                        <h4>Grazing and Nutrition</h4>
-                        <ul>
-                            <li>Supplementary feeding and fodder banks developed</li>
-                            <li>Gut microbiome diversity and digestion efficiency improved</li>
-                            <li>Enteric methane emissions intensity reduced</li>
-                            <li>Carbon sequestration reversed from net loss to 0.8 tCO₂e per hectare per year</li>
-                            <li>Increased biodiversity (vegetation and soil microbiome)</li>
-                        </ul>
-                    </div>
-                    <div class="outcome-item">
-                        <h4>Cattle as a Business</h4>
-                        <ul>
-                            <li>Annual off-take increased from 8% to over 15%</li>
-                            <li>Carcass value increased from ZMW 36/kg to ZMW 54/kg</li>
-                            <li>ZMW 6,500 extra income per animal brought to market</li>
-                            <li>ZMW 25,000 extra income from beef sales per farmer per year</li>
-                            <li>ZMW 355 million extra income per year across full project area</li>
-                        </ul>
-                    </div>
-                    <div class="outcome-item">
-                        <h4>Dual Purpose Genetics</h4>
-                        <ul>
-                            <li>Daily lactation increased from 4 to 8 liters per animal</li>
-                            <li>Lactation period increased from 90 to 200 days per year</li>
-                            <li>ZMW 6,600 from milk sales per farmer per year</li>
-                            <li>2 liters per day can be sold (after calf and household consumption)</li>
-                        </ul>
-                    </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <h4>Animal health & productivity</h4>
+                    <ul>
+                        <li>Mortality down, calving rates up</li>
+                        <li>Higher carcass weights and market value</li>
+                    </ul>
+                </div>
+                <div class="outcome-card">
+                    <h4>Landscape recovery</h4>
+                    <ul>
+                        <li>Improved vegetation cover and biodiversity</li>
+                        <li>Reduced erosion and greater forage availability</li>
+                    </ul>
+                </div>
+                <div class="outcome-card">
+                    <h4>Climate mitigation</h4>
+                    <ul>
+                        <li>Net removals across project areas; verified carbon credits</li>
+                    </ul>
+                </div>
+                <div class="outcome-card">
+                    <h4>Rural livelihoods</h4>
+                    <ul>
+                        <li>Increased incomes from beef and dairy; new market opportunities</li>
+                    </ul>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- MRV Section -->
-            <div class="monitoring-section">
-                <h3 class="monitoring-title">Monitoring, Reporting and Verification (MRV)</h3>
-                <p class="monitoring-text">The BR4RP will employ state-of-the-art environmental monitoring, reporting and verification systems to ensure effective and adaptive management strategies provide maximum environmental benefit to farmers and generate carbon credits with very high environmental integrity.</p>
-                <p class="monitoring-text">The development share of the gross carbon revenue from each project instance will cover all development and ongoing MRV costs for that instance, and the development of additional nature-based revenue streams (e.g., emissions intensity certification and biodiversity credits) and project instances.</p>
+    <!-- MRV & How we measure -->
+    <section class="section impact-mrv">
+        <div class="container grid-2">
+            <div>
+                <h2 class="section-title">Monitoring, Reporting & Verification</h2>
+                <p>Our MRV approach combines remote sensing, on-the-ground sampling and community data to ensure transparency, traceability and environmental integrity for carbon and biodiversity outcomes.</p>
+                <p>Revenue from verified credits funds ongoing monitoring, adaptive management and expanded project coverage.</p>
             </div>
+            <div>
+                <img src="mrvsampling.svg" alt="MRV sampling" style="max-width:420px;width:100%;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section impact-cta">
+        <div class="container" style="text-align:center;">
+            <h3>Ready to collaborate?</h3>
+            <p>Investors, donors and partners can help scale restoration across Zambia's rangelands.</p>
+            <a href="contact.html" class="cta-button primary">Contact us</a>
         </div>
     </section>
 

@@ -113,10 +113,10 @@ if (hamburger && navLinks) {
         toggleMenu();
     });
     
-    // Close menu when clicking backdrop
+  
     menuBackdrop.addEventListener('click', closeMenu);
     
-    // Close menu when clicking outside
+ 
     document.addEventListener('click', (e) => {
         if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
             closeMenu();

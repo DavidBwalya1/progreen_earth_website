@@ -1,0 +1,170 @@
+.impact-hero {
+    position: relative;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center 22%;
+    color: white;
+    overflow: hidden;
+    margin-top: -105px; /* Pull up under navbar */
+}
+
+.impact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.5) 35%,
+        rgba(0, 0, 0, 0.5) 65%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+.impact-hero-inner {
+    position: relative;
+    z-index: 2;
+    padding-top: calc(105px + var(--spacing-xl)); /* Account for navbar height */
+    padding-bottom: calc(var(--spacing-xl) * 1.5);
+    width: 100%;
+}
+
+.impact-hero-copy {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.impact-hero-header {
+    margin-bottom: var(--spacing-sm);
+}
+
+.impact-hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--accent-green);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.impact-hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.impact-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.impact-hero-lead {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.impact-hero-ctas {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+}
+
+.impact-hero-ctas .cta-button {
+    min-width: 180px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.impact-hero-ctas .cta-button .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.impact-hero-ctas .cta-button:hover .arrow {
+    transform: translateX(4px);
+}
+
+.impact-hero-ctas .cta-button.secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    color: white;
+}
+
+.impact-hero-ctas .cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+}
+
+@media (max-width: 1024px) {
+    .impact-hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .impact-hero-lead {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .impact-hero {
+        height: 650px;
+        margin-top: -75px; /* Adjust for smaller mobile navbar */
+    }
+
+    .impact-hero-inner {
+        padding-top: calc(75px + var(--spacing-lg)); /* Adjust for smaller mobile navbar */
+        padding-bottom: calc(var(--spacing-lg) * 2);
+    }
+    
+    .impact-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .impact-hero-lead {
+        font-size: 1.1rem;
+        padding: 0;
+    }
+    
+    .impact-hero-ctas {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        width: 100%;
+    }
+    
+    .impact-hero-ctas .cta-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .impact-hero-title {
+        font-size: 2.4rem;
+    }
+    
+    .impact-hero-lead {
+        font-size: 1.1rem;
+    }
+}
