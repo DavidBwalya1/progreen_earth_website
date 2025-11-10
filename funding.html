@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funding - Pro Green Earth</title>
+    <title>Investment - Pro Green Earth</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="funding-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="impact.html">Impact</a></li>
-                    <li><a href="activities.html">Activities</a></li>
+                 
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="funding.html" class="active">Funding</a></li>
@@ -38,106 +39,272 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="funding-hero" role="banner">
+        <div class="hero-overlay"></div>
         <div class="container">
-            <h1 class="page-title">Funding & Investment</h1>
-            <p class="page-subtitle">Sustainable Finance for Lasting Impact</p>
-        </div>
-    </section>
-
-    <!-- Image Carousel -->
-    <section class="carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="impulse.jpg" alt="Investment growth">
-                <div class="carousel-caption">
-                    <h3>Investment Opportunity</h3>
-                    <p>$10.2M for transformative change</p>
+            <div class="hero-content">
+                <h1 class="hero-title">Investment Opportunity</h1>
+                <p class="hero-subtitle">Join us in transforming 1.2M hectares of Zambian rangelands through sustainable agriculture and carbon removals</p>
+                <div class="hero-metrics">
+                    <div class="metric">
+                       
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="meeting2.jpeg" alt="Community benefit">
-                <div class="carousel-caption">
-                    <h3>Community Investment</h3>
-                    <p>63% directly benefits communities</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="nice1.jpeg" alt="Carbon credits">
-                <div class="carousel-caption">
-                    <h3>Carbon Finance</h3>
-                    <p>High integrity carbon removals</p>
-                </div>
-            </div>
-            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
         </div>
     </section>
 
-    <!-- Funding Section -->
-    <section class="section funding-section">
+    <!-- Project Overview -->
+    <section class="summary-section" role="region" aria-labelledby="summary-heading">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Funding Requirement</h2>
-                <div class="title-underline"></div>
+            <h2 id="summary-heading" class="section-title">Project Overview</h2>
+            <div class="title-underline"></div>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Project Scope</h3>
+                    <p>Initial development of 200,000 hectares with potential to scale to 1.2 million hectares of regenerative rangeland in Zambia's Western Province.</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Revenue Streams</h3>
+                    <p>Multiple income sources through carbon credits (VCUs), improved livestock productivity, and potential biodiversity credits.</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Community Impact</h3>
+                    <p>Project value directly benefits communities through improved livelihoods and sustainable practices.</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Environmental Impact</h3>
+                    <p>Regenerative agriculture and ecosystem restoration.</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Investment Structure -->
+    <section class="investment-section light-section" role="region" aria-labelledby="investment-heading">
+        <div class="container">
+            <h2 id="investment-heading" class="section-title">Investment Structure</h2>
+            <div class="title-underline"></div>
             
-            <div class="funding-content">
-                <div class="funding-highlight">
-                    <h3>Initial Investment Required</h3>
-                    <div class="funding-amount">$10.2 Million</div>
-                    <p>To develop the initial project instance of 200,000 hectares</p>
+            <div class="finance-grid">
+                <div class="finance-card primary">
+                    <div class="card-header">
+                        <h3>Carbon Credit Revenue</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li>High-integrity carbon removals</li>
+                        <li>Verified Carbon Units (VCUs)</li>
+                        <li>Forward contract opportunities</li>
+                        <li>Long-term revenue stream</li>
+                    </ul>
                 </div>
                 
-                <div class="funding-breakdown">
-                    <div class="breakdown-item">
-                        <div class="breakdown-label">Debt Financing</div>
-                        <div class="breakdown-value">$5.0M</div>
+                <div class="finance-card primary">
+                    <div class="card-header">
+                        <h3>Agricultural Returns</h3>
                     </div>
-                    <div class="breakdown-item">
-                        <div class="breakdown-label">VCU Sales (Carbon Credits)</div>
-                        <div class="breakdown-value">$5.2M</div>
+                    <ul class="feature-list">
+                        <li>Improved livestock productivity</li>
+                        <li>Sustainable dairy production</li>
+                        <li>Enhanced crop yields</li>
+                        <li>Market access improvements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="benefit-sharing">
+                <h3>Value Distribution</h3>
+                <div class="distribution-grid">
+                    <div class="distribution-item">
+                        <span class="percent"></span>
+                        <p>Direct Community Benefits<br><small>Sustainable Livelihoods</small></p>
+                    </div>
+                    <div class="distribution-item">
+                        <span class="percent"></span>
+                        <p>Barotse Royal Establishment<br><small>Traditional Authority</small></p>
+                    </div>
+                    <div class="distribution-item">
+                        <span class="percent"></span>
+                        <p>Government of Zambia<br><small>Regulatory Support</small></p>
+                    </div>
+                    <div class="distribution-item">
+                        <span class="percent"></span>
+                        <p>Project Operations<br><small>Development & Management</small></p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="funding-details">
-                    <div class="detail-card">
-                        <h4>Direct Community Benefit</h4>
-                        <p>The budget includes approximately <strong>$7.5 million (63% of total)</strong> for activities that directly benefit communities over the first 5 years.</p>
+    <!-- Carbon & Environmental Impact -->
+    <section class="impact-section dark-section" role="region" aria-labelledby="impact-heading">
+        <div class="container">
+            <h2 id="impact-heading" class="section-title">Carbon & Environmental Impact</h2>
+            <div class="title-underline"></div>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>Social Integrity</h3>
+                    <p>Carbon sequestration through non-competing land use enhances food production. Our co-design approach ensures:</p>
+                    <ul>
+                        <li>Social safeguarding</li>
+                        <li>Efficient implementation</li>
+                        <li>Equitable benefit sharing</li>
+                        <li>Community engagement</li>
+                    </ul>
+                </div>
+                
+                <div class="impact-card">
+                    <h3>Environmental Integrity</h3>
+                    <p>Our integrated approach creates lasting impact through:</p>
+                    <ul>
+                        <li>Sustainable practice adoption</li>
+                        <li>Carbon sequestration permanence</li>
+                        <li>Minimal leakage risk</li>
+                        <li>Enhanced biodiversity</li>
+                    </ul>
+                </div>
+                
+                <div class="impact-card">
+                    <h3>Timeline & Milestones</h3>
+                    <ul class="timeline-list">
+                        <li><strong>Year 1:</strong> Initial 200,000ha development</li>
+                        <li><strong>Years 2-3:</strong> First carbon credit issuance</li>
+                        <li><strong>Years 3-5:</strong> Scale to additional areas</li>
+                        <li><strong>Year 5+:</strong> Expand to 1.2M hectares</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Investment Details moved from Home page -->
+    <!-- Investment Benefits -->
+    <section class="benefits-section light-section" role="region" aria-labelledby="benefits-heading">
+        <div class="container">
+            <h2 id="benefits-heading" class="section-title">Why Invest in BR4RP?</h2>
+            <div class="title-underline"></div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="benefit-number">01</span>
+                    <h3>Proven Leadership</h3>
+                    <ul class="benefit-list">
+                        <li>30+ years Zambian agriculture experience</li>
+                        <li>13+ years agricultural consulting</li>
+                        <li>10+ years climate finance expertise</li>
+                        <li>8,000+ smallholder farmers impacted</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-number">02</span>
+                    <h3>Strong Governance</h3>
+                    <ul class="benefit-list">
+                        <li>Barotse Royal Establishment backing</li>
+                        <li>Ministry of Livestock support</li>
+                        <li>Green Economy Ministry approval</li>
+                        <li>All regulatory clearances secured</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-number">03</span>
+                    <h3>Multiple Revenue Streams</h3>
+                    <ul class="benefit-list">
+                        <li>Carbon credit sales (VCUs)</li>
+                        <li>Improved livestock productivity</li>
+                        <li>Dairy production increase</li>
+                        <li>Potential biodiversity credits</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-number">04</span>
+                    <h3>Measurable Impact</h3>
+                    <ul class="benefit-list">
+                        <li>$3.3M annual farmer income increase</li>
+                        <li>34M tons CO₂ sequestered (40 years)</li>
+                        <li>Ecosystem restoration</li>
+                        <li>Enhanced food security</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Returns -->
+    <section class="returns-section dark-section" role="region" aria-labelledby="returns-heading">
+        <div class="container">
+            <h2 id="returns-heading" class="section-title">Project Returns</h2>
+            <div class="title-underline"></div>
+            
+            <div class="returns-content">
+                <div class="returns-grid">
+                    <div class="returns-card">
+                        <h3>Financial Returns</h3>
+                        <ul class="returns-list">
+                            <li>Carbon credit revenue from VCU sales</li>
+                            <li>Improved livestock productivity returns</li>
+                            <li>Potential biodiversity credit upside</li>
+                            <li>Emissions intensity certification value</li>
+                        </ul>
                     </div>
-                    <div class="detail-card">
-                        <h4>Benefit Sharing Mechanism</h4>
-                        <p>Based on gross carbon revenue: Barotse Royal Establishment receives <strong>5%</strong>, Government of Zambia receives <strong>5%</strong>, and the remaining <strong>90%</strong> is reinvested in the project and communities.</p>
+                    
+                    <div class="returns-card">
+                        <h3>Risk Mitigation</h3>
+                        <ul class="returns-list">
+                            <li>Government & traditional authority support</li>
+                            <li>Proven community co-design model</li>
+                            <li>Experienced implementation team</li>
+                            <li>Multiple revenue streams diversity</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="returns-card">
+                        <h3>Growth Potential</h3>
+                        <ul class="returns-list">
+                            <li>Scale from 200k to 1.2M hectares</li>
+                            <li>Expanding carbon credit generation</li>
+                            <li>Increased community participation</li>
+                            <li>Regional model replication potential</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="integrity-section">
-                    <h3>High Integrity Net Carbon Removals</h3>
-                    <div class="integrity-grid">
-                        <div class="integrity-card">
-                            <h4>Social Integrity</h4>
-                            <p>Regenerative agriculture carbon removals offer an advantage over conservation or reforestation, as carbon is sequestered through a non-competing land use that simultaneously enhances food production. The co-design and development strategy ensures social safeguarding, efficient implementation, and equitable benefit sharing.</p>
-                        </div>
-                        <div class="integrity-card">
-                            <h4>Environmental Integrity</h4>
-                            <p>The same activities that generate carbon removals simultaneously create significant socio-economic benefits, increasing the likelihood of long-term practice adoption and carbon sequestration permanence. Leakage risk is minimal, as these activities enhance rather than displace existing livelihoods.</p>
-                        </div>
+    <!-- Call to Action -->
+    <section class="funding-cta" role="region" aria-labelledby="cta-title">
+        <div class="container">
+            <div class="cta-wrapper">
+                <h2 id="cta-title">Partner in Sustainable Impact</h2>
+                <p>Join us in transforming livelihoods and restoring ecosystems through innovative regenerative agriculture.</p>
+                
+                <div class="cta-metrics">
+                    <div class="cta-metric">
+                        <span class="metric-number">200k ha</span>
+                        <span class="metric-label">Initial Project Area</span>
+                    </div>
+                    <div class="cta-metric">
+                        <span class="metric-number">8,000+</span>
+                        <span class="metric-label">Community Members</span>
+                    </div>
+                    <div class="cta-metric">
+                        <span class="metric-number">1.2M ha</span>
+                        <span class="metric-label">Total Project Scale</span>
                     </div>
                 </div>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="cta-button primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/your-calendly-username/partnership-discussion'});return false;">Schedule Partnership Discussion</a>
+                    <a href="/contact.html" class="cta-button secondary">Contact Our Team</a>
+                </div>
 
-                <!-- Timeline Section -->
-                <div class="timeline-section">
-                    <h3>Development Timeline</h3>
-                    <p class="timeline-subtitle">Initial instance (200,000ha) development timeline to first carbon credit issuance</p>
-                    <div class="timeline-info">
-                        <p>The project follows a structured development approach to ensure financial self-sustainability through ongoing VCU sales. Livestock production co-benefit costs equate to roughly half the total budget, making the project highly suitable for development finance.</p>
-                    </div>
+                <div class="cta-disclaimer">
+                    <p>This information is for qualified partners only. Partnership opportunities are subject to terms and conditions.</p>
                 </div>
             </div>
         </div>

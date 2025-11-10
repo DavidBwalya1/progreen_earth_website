@@ -1,0 +1,766 @@
+/* Funding Page Specific Styles */
+.funding-hero {
+    position: relative;
+    min-height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('green.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: clamp(3rem, 8vh, 6rem) 0;
+}
+
+.funding-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: min(90%, 900px);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.funding-hero .hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: clamp(1rem, 3vh, 1.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.funding-hero .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    margin: 0 auto clamp(2rem, 5vh, 3rem);
+    font-weight: 400;
+    opacity: 0.95;
+    max-width: min(100%, 700px);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-metrics {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: clamp(1.5rem, 4vh, 2.5rem);
+    flex-wrap: wrap;
+}
+
+.hero-metrics .metric {
+    text-align: center;
+    flex: 1;
+    min-width: min(250px, 100%);
+    padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.metric-value {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.metric-label {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    opacity: 0.95;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Responsive Breakpoints */
+@media (max-width: 768px) {
+    .funding-hero {
+        min-height: 60vh;
+    }
+
+    .hero-metrics {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .hero-metrics .metric {
+        min-width: auto;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .funding-hero {
+        min-height: 50vh;
+    }
+
+    .funding-hero .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero-metrics .metric {
+        padding: 0.5rem;
+    }
+}
+
+/* Support for larger screens */
+@media (min-width: 1440px) {
+    .funding-hero .hero-content {
+        max-width: 1100px;
+    }
+
+    .funding-hero .hero-subtitle {
+        max-width: 800px;
+    }
+}
+
+/* Summary Section */
+.summary-section {
+    padding: 6rem 0;
+    background: #fff;
+    position: relative;
+}
+
+.summary-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, transparent 0%, rgba(248, 249, 250, 0.5) 100%);
+    pointer-events: none;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.summary-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.summary-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #2E7D32;
+    transform: scaleX(0.3);
+    transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card:hover::before {
+    transform: scaleX(1);
+}
+
+.summary-card h3 {
+    color: #2E7D32;
+    margin-bottom: 1.25rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.summary-card p {
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Section Common Styles */
+.section {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(46, 125, 50, 0.2), transparent);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: #2E7D32;
+    border-radius: 2px;
+}
+
+/* Investment Section */
+.investment-section {
+    padding: 6rem 0;
+    background: linear-gradient(45deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.finance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin: 4rem 0;
+}
+
+.finance-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(46, 125, 50, 0.1);
+}
+
+.finance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.finance-card.primary {
+    border-top: 4px solid #2E7D32;
+    position: relative;
+}
+
+.finance-card.primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(46, 125, 50, 0.05) 0%, transparent 100%);
+    border-radius: 15px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card-header {
+    position: relative;
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+.card-header h3 {
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.card-header h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #2E7D32;
+    border-radius: 2px;
+}
+
+.amount {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2E7D32;
+    display: block;
+    margin-top: 1rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-list li {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    transition: transform 0.2s ease;
+}
+
+.feature-list li:hover {
+    transform: translateX(5px);
+}
+
+.feature-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #2E7D32;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+.feature-list li:hover::before {
+    transform: translateX(3px);
+}
+
+/* Distribution Grid */
+.benefit-sharing {
+    margin-top: 4rem;
+}
+
+.distribution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.distribution-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.percent {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2E7D32;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.impact-section .section-title {
+    color: #fff;
+    position: relative;
+}
+
+.impact-section .section-title::after {
+    background: #fff;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.impact-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.impact-card h3 {
+    color: #2E7D32;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.impact-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #2E7D32;
+    border-radius: 2px;
+}
+
+.impact-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.impact-card li {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s ease;
+}
+
+.impact-card li:hover {
+    transform: translateX(5px);
+}
+
+.impact-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2E7D32;
+    font-size: 1.5rem;
+    line-height: 1;
+    top: 1px;
+}
+
+.impact-card h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.impact-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.impact-card li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.impact-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2E7D32;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    position: relative;
+}
+
+.benefits-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(46, 125, 50, 0.2), transparent);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.benefit-card {
+    background: #fff;
+    padding: 3rem 2.5rem 2.5rem;
+    border-radius: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(46, 125, 50, 0.1);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-number {
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    background: #2E7D32;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+    border: 2px solid #fff;
+}
+
+.benefit-card h3 {
+    color: #1a1a1a;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(46, 125, 50, 0.1);
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.benefit-list li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefit-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2E7D32;
+}
+
+/* Returns Section */
+.returns-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.returns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.returns-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.returns-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.returns-list li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.returns-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #2E7D32;
+}
+
+/* CTA Section */
+.funding-cta {
+    padding: 8rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('meeting2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.funding-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.funding-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+}
+
+.cta-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.funding-cta h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.9) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.funding-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-metrics {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.cta-metric {
+    text-align: center;
+}
+
+.metric-number {
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2E7D32;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background: #2E7D32;
+    color: #fff;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-disclaimer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .funding-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-metrics {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .finance-grid,
+    .impact-grid,
+    .benefits-grid,
+    .returns-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .distribution-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .cta-metrics {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}

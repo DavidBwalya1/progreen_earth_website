@@ -23,7 +23,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="impact.html">Impact</a></li>
-                    <li><a href="activities.html">Activities</a></li>
+                  
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="team.html" class="active">Team</a></li>
                     <li><a href="funding.html">Funding</a></li>
@@ -38,112 +38,44 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    
+    
+
+    <!-- Team Section (modern card grid) -->
+    <section class="section team-section" aria-labelledby="team-heading">
         <div class="container">
-            <h1 class="page-title">Our Team</h1>
-            <p class="page-subtitle">Experienced Leadership Driving Change</p>
-        </div>
-    </section>
-
-    <!-- Image Carousel -->
-    <section class="carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="meeting.jpg" alt="Team collaboration">
-                <div class="carousel-caption">
-                    <h3>Collaborative Leadership</h3>
-                    <p>Working together for sustainable impact</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="group.jpeg" alt="Professional team">
-                <div class="carousel-caption">
-                    <h3>Expert Team</h3>
-                    <p>Decades of combined experience</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="grouppicture.jpeg" alt="Community engagement">
-                <div class="carousel-caption">
-                    <h3>Community Partnership</h3>
-                    <p>Co-designing solutions with local communities</p>
-                </div>
-            </div>
-            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="section team-section">
-        <div class="container">
-            <div class="team-intro">
-                <p>Pro Green Earth (PGE) is a Zambian company established specifically to implement the BR4RP, a project conceived at the request of His Majesty the Litunga, King of the Barotse people. The organisation is a joint venture between Leopard Investments Company Ltd, Impuls Africa, and Lucy Pieterse.</p>
-                <p>PGE is developing this project in partnership with the Barotse Royal Establishment, with the full support of the Ministry of Livestock and Fisheries, and the Ministry of Green Economy and Environment.</p>
+            <div class="team-intro modern">
+                <h2 id="team-heading">Our Leadership</h2>
+                <p class="lead">Pro Green Earth is a Zambian organisation set up to implement the Barotse Rangelands for Restoration Project. We combine deep local knowledge, scientific rigour and long-term partnerships to restore landscapes and improve livelihoods.</p>
             </div>
 
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-member-header">
-                        <div class="member-avatar">CI</div>
-                        <div class="member-info">
-                            <h3>Carl Irwin</h3>
-                            <p class="member-title">Chairman</p>
-                        </div>
-                    </div>
-                    <p class="member-bio">Highly-experienced business leader with 30+ years of mixed farming experience in Zambia. Founder and former CEO of Zambeef Products PLC, one of Southern Africa's largest agricultural companies and listed on the London AIM and Zambian Stock Exchanges.</p>
+            <div class="team-grid" role="list">
+                <div class="team-member" tabindex="0">
+                    <img src="carl-irwin.jpg" alt="Carl Irwin" loading="lazy">
+                    <h4>Carl Irwin</h4>
+                    <p>Chairman — Highly-experienced business leader with 30+ years of mixed farming experience in Zambia. Founder and former CEO of Zambeef Products PLC.</p>
                 </div>
 
-                <div class="team-card">
-                    <div class="team-member-header">
-                        <div class="member-avatar">RV</div>
-                        <div class="member-info">
-                            <h3>Renier Van Vuuren</h3>
-                            <p class="member-title">Chief Executive Officer</p>
-                        </div>
-                    </div>
-                    <p class="member-bio">13+ years of agricultural consulting experience in Zambia, with services delivered to projects funded by USAID, FCDO, the EU, Conservation International, CARITAS, the Czech government, and Zambia's Ministry of Livestock and Fisheries. Since 2021, Renier's projects have impacted more than 8000 smallholder farmers.</p>
+                <div class="team-member" tabindex="0">
+                    <img src="renier.jpg" alt="Renier Jansen van Vuuren" loading="lazy">
+                    <h4>Renier Jansen van Vuuren</h4>
+                    <p>Founder & Director — Agribusiness and program strategy. 13+ years of agricultural consulting experience; projects have impacted over 8000 smallholder farmers.</p>
                 </div>
 
-                <div class="team-card">
-                    <div class="team-member-header">
-                        <div class="member-avatar">LP</div>
-                        <div class="member-info">
-                            <h3>Lucy Pieterse</h3>
-                            <p class="member-title">Chief Technical Officer</p>
-                        </div>
-                    </div>
-                    <p class="member-bio">10+ years of experience in facilitating nature-based solutions and international climate finance, leading to verification of over 12 million tons of CO₂ in reduced emissions in Zambia's Agriculture, Forestry and other Land Use (AFOLU) sector.</p>
+                <div class="team-member" tabindex="0">
+                    <img src="team_member_2.jpg" alt="Lucy Pieterse" loading="lazy">
+                    <h4>Lucy Pieterse</h4>
+                    <p>Chief Technical Officer — 10+ years facilitating nature-based solutions and climate finance; experience verifying AFOLU emissions reductions.</p>
                 </div>
 
-                <div class="team-card">
-                    <div class="team-member-header">
-                        <div class="member-avatar">CM</div>
-                        <div class="member-info">
-                            <h3>Christabel Malijani</h3>
-                            <p class="member-title">Government Liaison & Director for Health and Safety</p>
-                        </div>
-                    </div>
-                    <p class="member-bio">With decades of experience in Zambia's public and private sectors, Mrs. Malijani is a Fellow of the Zambian Institute for Environmental Health and has been honoured by the University of Environmental Health for her outstanding contributions.</p>
+                <div class="team-member" tabindex="0">
+                    <img src="team_member_3.svg" alt="Christabel Malijani" loading="lazy">
+                    <h4>Christabel Malijani</h4>
+                    <p>Government Liaison & Director for Health and Safety — Decades of public and private sector experience; Fellow of the Zambian Institute for Environmental Health.</p>
                 </div>
             </div>
 
-            <div class="approvals-section">
-                <h3>Letters of No-Objection</h3>
-                <div class="approvals-grid">
-                    <div class="approval-item">✓ Barotse Royal Establishment Approval</div>
-                    <div class="approval-item">✓ Ministry of Green Economy and Environment</div>
-                    <div class="approval-item">✓ Zambia Environmental Management Agency</div>
-                    <div class="approval-item">✓ Department of Forestry</div>
-                    <div class="approval-item">✓ Ministry of Livestock</div>
-                </div>
-            </div>
+            
         </div>
     </section>
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Pro Green Earth</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="impact.html">Impact</a></li>
-                    <li><a href="activities.html">Activities</a></li>
+           
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="funding.html">Funding</a></li>
@@ -39,112 +40,78 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    
+
+    <!-- Clean Contact Layout -->
+    <section class="contact-hero">
         <div class="container">
-            <h1 class="page-title">Contact Us</h1>
-            <p class="page-subtitle">Get in Touch with Pro Green Earth</p>
+            <h1 class="page-title">Get in touch</h1>
+            <p class="page-subtitle">We'd love to hear from you - partnership enquiries, community programs or media.</p>
         </div>
     </section>
 
-    <!-- Image Carousel -->
-    <section class="carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="boat.jpg" alt="Zambia landscape">
-                <div class="carousel-caption">
-                    <h3>Located in Zambia</h3>
-                    <p>Serving Western Province communities</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="discussion.jpeg" alt="Communication">
-                <div class="carousel-caption">
-                    <h3>Let's Connect</h3>
-                    <p>Reach out for partnerships and inquiries</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="meeting.jpg" alt="Collaboration">
-                <div class="carousel-caption">
-                    <h3>Partnership Opportunities</h3>
-                    <p>Working together for sustainable impact</p>
-                </div>
-            </div>
-            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-            </div>
-        </div>
-    </section>
+    <main class="container" aria-label="Contact content">
+        <div class="contact-grid">
+            <!-- Left: contact card that opens Calendly -->
+            <div>
+                <div class="contact-form" id="contactCard" role="region" aria-labelledby="contactCardTitle">
+                    <h3 id="contactCardTitle">Schedule a conversation</h3>
+                    <p class="note">Click the button below to choose a time that suits you. You'll be redirected to our scheduling page.</p>
+                    <div style="display:flex;gap:1rem;align-items:center;margin-top:1rem;">
+                        <!-- Primary action opens Calendly popup. Replace the calendlyBase URL in the script with your event URL. -->
+                        <button type="button" class="btn-primary" onclick="openCalendlyFromCard()">Schedule via Calendly</button>
 
-    <!-- Contact Section -->
-    <section class="section contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get in Touch</h2>
-                <div class="title-underline"></div>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:renier@progreenearth.africa">renier@progreenearth.africa</a>
-                        </div>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div>
-                            <h4>Phone</h4>
-                            <a href="tel:+260968493432">+260 96 849 3432</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div>
-                            <h4>Website</h4>
-                            <a href="http://www.progreenearth.africa" target="_blank">www.progreenearth.africa</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div>
-                            <h4>Address</h4>
-                            <p>Farm 452a/ Leopards Hill Rd<br>PO Box 30796, Lusaka, Zambia</p>
-                        </div>
-                    </div>
+                    <p class="note" style="margin-top:0.75rem;">We aim to respond within 3 working days. For urgent matters please call the numbers on the right.</p>
                 </div>
+
+                <section class="faq" aria-labelledby="faq-heading">
+                    <h3 id="faq-heading">Helpful links</h3>
+                    <details class="faq-item"><summary>How can I partner with Pro Green Earth?</summary>
+                        <p>We welcome partnership enquiries — schedule a meeting via the contact form or email our team for an introduction.</p>
+                    </details>
+                    <details class="faq-item"><summary>Where do you operate?</summary>
+                        <p>Our work focuses on Zambia's Western Province with scalable models across the region.</p>
+                    </details>
+                </section>
             </div>
 
-            <!-- Additional Contact Info -->
-            <div class="additional-contacts">
-                <h3>Key Contacts</h3>
-                <div class="contacts-grid">
-                    <div class="contact-person">
-                        <h4>Renier Van Vuuren</h4>
-                        <p class="contact-role">Chief Executive Officer</p>
+            <!-- Right: contact cards + map -->
+            <aside>
+                <div class="contact-cards">
+                    <div class="card">
+                        <h4>Contact</h4>
+                        <p class="meta">General enquiries</p>
                         <p><a href="mailto:renier@progreenearth.africa">renier@progreenearth.africa</a></p>
                         <p><a href="tel:+260968493432">+260 96 849 3432</a></p>
                     </div>
-                    <div class="contact-person">
-                        <h4>Alternative Contact</h4>
-                        <p class="contact-role">General Inquiries</p>
-                        <p><a href="mailto:renier@impuls.africa">renier@impuls.africa</a></p>
-                        <p><a href="tel:+260977999002">+260 97 799 9002</a></p>
+
+                    <div class="card">
+                        <h4>Office</h4>
+                        <p class="meta">Head office</p>
+                        <p>Farm 452a / Leopards Hill Rd<br>PO Box 30796, Lusaka, Zambia</p>
+                        <p><a href="http://www.progreenearth.africa" target="_blank" rel="noopener">progreenearth.africa</a></p>
                     </div>
-                    <div class="contact-person">
-                        <h4>Carl Irwin</h4>
-                        <p class="contact-role">Chairman</p>
+
+                    <div class="card">
+                        <h4>Chairman</h4>
+                        <p class="meta">Carl Irwin</p>
                         <p><a href="mailto:carl@kyindu.com">carl@kyindu.com</a></p>
                     </div>
+
+                    
                 </div>
-            </div>
+
+                <div class="contact-cta" style="margin-top:1.25rem;">
+                    
+                    <div class="cta-actions">
+                        <a href="#" class="btn-primary" onclick="openCalendlyFromCard();return false;">Message</a>
+                        
+                    </div>
+                </div>
+            </aside>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -160,6 +127,83 @@
             </div>
         </div>
     </footer>
+
+    <!-- Calendly widget (popup) - improved loader and fallback -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <script>
+    (function(){
+        // Replace this with your actual Calendly event URL
+        var calendlyBase = 'https://calendly.com/YOUR_CALENDLY_USERNAME/meeting';
+
+        function isCalendlyReady(){
+            return !!(window.Calendly && typeof Calendly.initPopupWidget === 'function');
+        }
+
+        function loadCalendlyThen(cb){
+            if(isCalendlyReady()) return cb();
+            // If the script tag was added async but not loaded yet, wait for it
+            var waited = 0;
+            var iv = setInterval(function(){
+                if(isCalendlyReady()){
+                    clearInterval(iv);
+                    return cb();
+                }
+                waited += 100;
+                if(waited > 4000){
+                    clearInterval(iv);
+                    return cb();
+                }
+            }, 100);
+        }
+
+        function buildCalendlyUrl(){
+            var name = document.getElementById('name') ? document.getElementById('name').value.trim() : '';
+            var email = document.getElementById('email') ? document.getElementById('email').value.trim() : '';
+            var org = document.getElementById('org') ? document.getElementById('org').value.trim() : '';
+            var phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
+            var message = document.getElementById('message') ? document.getElementById('message').value.trim() : '';
+
+            var params = [];
+            if(name) params.push('name=' + encodeURIComponent(name));
+            if(email) params.push('email=' + encodeURIComponent(email));
+            // custom answers a1,a2,a3 can be mapped to Calendly event questions if configured
+            if(org) params.push('a1=' + encodeURIComponent(org));
+            if(phone) params.push('a2=' + encodeURIComponent(phone));
+            if(message) params.push('a3=' + encodeURIComponent(message));
+
+            return calendlyBase + (params.length ? ('?' + params.join('&')) : '');
+        }
+
+        window.openCalendlyFromCard = function(){
+            if(!calendlyBase || calendlyBase.indexOf('YOUR_CALENDLY_USERNAME') !== -1){
+                alert('Please set your Calendly URL in the page script before using this feature.');
+                return;
+            }
+            var url = buildCalendlyUrl();
+            loadCalendlyThen(function(){
+                if(isCalendlyReady()){
+                    try{
+                        Calendly.initPopupWidget({url: url});
+                    }catch(e){
+                        console.warn('Calendly popup failed, opening in new window', e);
+                        window.open(url, 'calendly', 'width=900,height=700');
+                    }
+                } else {
+                    // last resort fallback
+                    window.open(url, 'calendly', 'width=900,height=700');
+                }
+            });
+        };
+
+        window.clearContactCard = function(){
+            ['name','org','email','phone','message'].forEach(function(id){
+                var el = document.getElementById(id);
+                if(el) el.value = '';
+            });
+        };
+    })();
+    </script>
 
     <script src="script.js"></script>
     <script src="carousel.js"></script>

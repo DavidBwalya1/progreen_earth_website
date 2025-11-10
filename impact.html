@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impact - Pro Green Earth</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="impact-hero-new.css">
-    <link rel="stylesheet" href="metrics-overlay.css">
+    <link rel="stylesheet" href="impact-unique.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,7 +24,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="impact.html" class="active">Impact</a></li>
-                    <li><a href="activities.html">Activities</a></li>
+                  
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="funding.html">Funding</a></li>
@@ -41,29 +40,64 @@
     </nav>
 
     <!-- Impact Hero -->
-    <section class="impact-hero" style="background-image: url('hugerangeland.jpg');">
-        <div class="impact-hero-overlay"></div>
+    <section class="impact-hero">
+        <img src="hugerangeland.jpg" alt="Barotse rangelands impact" class="impact-hero-bg">
         <div class="container">
-            <div class="impact-hero-inner">
-                <div class="impact-hero-copy">
-                    <div class="impact-hero-header">
-                        <div class="impact-hero-topline">
-                            <p class="eyebrow">Impact</p>
-                        </div>
-                        <h1 class="impact-hero-title">
-                            <span class="title-line">Delivering measurable benefits for people and planet</span>
-                        </h1>
+            <div class="impact-hero-content">
+               
+                    <h1 class="impact-title">Transforming Landscapes, Empowering Communities</h1>
+                <p class="impact-subtitle">Creating measurable change across the Barotse rangelands through community-led restoration and sustainable development.</p>
+                <div class="cta-buttons">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats (like about-intro stats) -->
+    <section id="impact-stats" class="about-intro">
+        <div class="container about-intro-inner">
+            <div class="intro-left">
+                <h1 class="about-heading">Our Impact in Numbers</h1>
+                <p class="about-lead">We combine community-led restoration, improved livestock management, and rigorous monitoring to create resilient landscapes and stronger rural livelihoods.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                       
                     </div>
-                    <div class="impact-hero-content">
-                        <p class="impact-hero-lead">
-                            We combine community-led rangeland restoration, livestock 
-                            productivity interventions and rigorous monitoring to create 
-                            resilient landscapes, stronger rural livelihoods and 
-                            high-integrity carbon removals.
-                        </p>
-                        <div class="impact-hero-ctas">
-                            <a href="funding.html" class="cta-button primary">Partner with us</a>
-                            <a href="#metrics" class="cta-button secondary">View metrics <span class="arrow">→</span></a>
+                </div>
+            </div>
+            <div class="intro-right">
+                <div class="about-card-hero">
+                    <img src="withcows.jpeg" alt="Community impact" loading="lazy" />
+                    <div class="card-quote">"Our animals are healthier, and the grasslands are coming back."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Benefits (two-column grid) -->
+    <section id="impact-benefits" class="section about-approach">
+        <div class="container">
+            <div class="grid-2 split">
+                <div>
+                    <h2>How the Project Benefits the Community</h2>
+                    <ul class="approach-list">
+                        <li><strong>Economic empowerment:</strong> Higher incomes from improved livestock and carbon revenue.</li>
+                        <li><strong>Food security:</strong> Better grazing and animal health for reliable food production.</li>
+                        <li><strong>Skills & leadership:</strong> Training in sustainable land management and community governance.</li>
+                        <li><strong>Equity:</strong> Transparent benefit-sharing and inclusive decision-making.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Environmental & Social Impact</h2>
+                    <div class="impact-cards">
+                        <div class="impact-card">
+                            <strong>People</strong>
+                            <p>Thousands of households see improved incomes, resilience, and opportunity.</p>
+                        </div>
+                        <div class="impact-card">
+                            <strong>Planet</strong>
+                            <p>Restored rangelands, increased soil carbon, and richer biodiversity.</p>
                         </div>
                     </div>
                 </div>
@@ -71,126 +105,36 @@
         </div>
     </section>
 
-    <!-- Key metrics -->
-    <section id="metrics" class="section impact-metrics">
-        <div class="container">
-            <div class="metrics-wrapper">
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <img src="hugerangeland.jpg" alt="Aerial view of rangeland" loading="lazy" class="metric-image">
-                        <div class="metric-overlay"></div>
-                        <div class="metric-content">
-                            <div class="metric-value" data-value="1.2">1.2M</div>
-                            <div class="metric-label">Hectares under management</div>
-                        </div>
-                    </div>
-                    <div class="metric-card">
-                        <img src="soil.jpeg" alt="Soil restoration" loading="lazy" class="metric-image">
-                        <div class="metric-overlay"></div>
-                        <div class="metric-content">
-                            <div class="metric-value" data-value="34">34M tCO₂e</div>
-                            <div class="metric-label">Projected removals (40 yrs)</div>
-                        </div>
-                    </div>
-                    <div class="metric-card">
-                        <img src="withcows.jpeg" alt="Farmers with livestock" loading="lazy" class="metric-image">
-                        <div class="metric-overlay"></div>
-                        <div class="metric-content">
-                            <div class="metric-value" data-value="3.3">$3.3M</div>
-                            <div class="metric-label">Annual uplift to farmers</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Highlights -->
-    <section class="section impact-highlights">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What we deliver</h2>
-                <div class="title-underline"></div>
-            </div>
-
-            <div class="highlights-grid">
-                <article class="highlight-card">
-                    <h3>Regenerative grazing</h3>
-                    <p>Community-led grazing reforms and rotational systems that restore pasture productivity and increase resilience to drought.</p>
-                </article>
-                <article class="highlight-card">
-                    <h3>Livestock productivity</h3>
-                    <p>Veterinary support, improved genetics and market access which translate into higher incomes and reduced losses.</p>
-                </article>
-                <article class="highlight-card">
-                    <h3>Carbon integrity</h3>
-                    <p>MRV systems ensure removals are quantified, auditable and aligned with recognised carbon accounting frameworks.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Outcomes (compact grid) -->
-    <section class="section impact-outcomes">
+    <!-- Community Voices (testimonials) -->
+    <section class="section about-team">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Expected outcomes</h2>
+                <h2 class="section-title">Community Voices</h2>
                 <div class="title-underline"></div>
             </div>
-
-            <div class="outcomes-grid">
-                <div class="outcome-card">
-                    <h4>Animal health & productivity</h4>
-                    <ul>
-                        <li>Mortality down, calving rates up</li>
-                        <li>Higher carcass weights and market value</li>
-                    </ul>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="withcows.jpeg" alt="John Mwanza" loading="lazy">
+                    <h4>John Mwanza</h4>
+                    <p>"The training in rotational grazing has transformed how we manage our cattle. Our animals are healthier, and we're seeing the grasslands recover."</p>
                 </div>
-                <div class="outcome-card">
-                    <h4>Landscape recovery</h4>
-                    <ul>
-                        <li>Improved vegetation cover and biodiversity</li>
-                        <li>Reduced erosion and greater forage availability</li>
-                    </ul>
+                <div class="team-member">
+                    <img src="meeting2.jpeg" alt="Mary Lubinda" loading="lazy">
+                    <h4>Mary Lubinda</h4>
+                    <p>"As women in the community, we now have more say in land management decisions. The project has created new opportunities for our families."</p>
                 </div>
-                <div class="outcome-card">
-                    <h4>Climate mitigation</h4>
-                    <ul>
-                        <li>Net removals across project areas; verified carbon credits</li>
-                    </ul>
-                </div>
-                <div class="outcome-card">
-                    <h4>Rural livelihoods</h4>
-                    <ul>
-                        <li>Increased incomes from beef and dairy; new market opportunities</li>
-                    </ul>
+                <div class="team-member">
+                    <img src="Communityvoice.jpg" alt="Mary Lubinda" loading="lazy">
+                    <h4>Agness Jere</h4>
+                    <p>"Through this initiative, women in our area are increasingly involved in decisions about land use. It has opened up fresh avenues for improving the wellbeing and livelihoods of our households."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MRV & How we measure -->
-    <section class="section impact-mrv">
-        <div class="container grid-2">
-            <div>
-                <h2 class="section-title">Monitoring, Reporting & Verification</h2>
-                <p>Our MRV approach combines remote sensing, on-the-ground sampling and community data to ensure transparency, traceability and environmental integrity for carbon and biodiversity outcomes.</p>
-                <p>Revenue from verified credits funds ongoing monitoring, adaptive management and expanded project coverage.</p>
-            </div>
-            <div>
-                <img src="mrvsampling.svg" alt="MRV sampling" style="max-width:420px;width:100%;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-            </div>
-        </div>
-    </section>
+    
 
-    <!-- CTA -->
-    <section class="section impact-cta">
-        <div class="container" style="text-align:center;">
-            <h3>Ready to collaborate?</h3>
-            <p>Investors, donors and partners can help scale restoration across Zambia's rangelands.</p>
-            <a href="contact.html" class="cta-button primary">Contact us</a>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer class="footer">
@@ -208,6 +152,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="carousel.js"></script>
 </body>
 </html>
