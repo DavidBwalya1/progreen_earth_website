@@ -3,199 +3,927 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment - Pro Green Earth</title>
+    <title>Funding - Pro Green Earth</title>
+    <meta name="description" content="Invest in Pro Green Earth's sustainable agriculture and rangeland restoration projects in Zambia. Create lasting environmental and social impact.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="funding-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional styles for funding page */
+        :root {
+            --primary-green: #2d5016;
+            --secondary-green: #3e6a1b;
+            --accent-green: #5c9e3d;
+            --light-green: #e8f3e1;
+            --dark-text: #2d3436;
+            --light-text: #f5f6fa;
+            --transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .funding-hero {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') center/cover no-repeat;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-pretitle {
+            display: inline-block;
+            background: var(--accent-green);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+            border: 2px solid var(--accent-green);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-metrics {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-10px) translateX(-50%); }
+            60% { transform: translateY(-5px) translateX(-50%); }
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-subtitle {
+            display: inline-block;
+            color: var(--accent-green);
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .title-underline {
+            height: 4px;
+            width: 80px;
+            background: var(--accent-green);
+            margin: 0 auto 20px;
+        }
+        
+        .section-intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 0;
+        }
+        
+        /* Overview Section */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .overview-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+        
+        .overview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--primary-green);
+        }
+        
+        .overview-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+        
+        .overview-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        
+        /* Investment Section */
+        .investment-section {
+            background: #f9f9f9;
+        }
+        
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .investment-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .investment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .investment-header {
+            background: var(--primary-green);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        
+        .investment-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .investment-period {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .investment-features {
+            padding: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .feature-item i {
+            color: var(--accent-green);
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .investment-cta {
+            text-align: center;
+            padding: 0 30px 30px;
+        }
+        
+        /* Impact Section */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .impact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .impact-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+        
+        .impact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+        
+        .impact-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/pattern.png') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 80%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .overview-grid,
+            .investment-grid,
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .metric-value {
+                font-size: 1.8rem;
+            }
+            
+            .metric-label {
+                font-size: 0.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .cta-title {
+                font-size: 1.8rem;
+            }
+            
+            .cta-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="progreen_logo.png" alt="Pro Green Earth - Sustainable Agriculture Zambia" class="logo-image">
-                    </a>
-                </div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="impact.html">Impact</a></li>
-                 
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="funding.html" class="active">Funding</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="index.html" aria-label="Pro Green Earth Home">
+                            <img src="progreen_logo.png" alt="Pro Green Earth - Sustainable Agriculture Zambia" class="logo-image">
+                        </a>
+                    </div>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="impact.html">Impact</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="funding.html" class="active" aria-current="page">Funding</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="funding-hero" role="banner">
-        <div class="hero-overlay"></div>
+    <section class="funding-hero" role="banner" aria-labelledby="hero-heading">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Investment Opportunity</h1>
-                <p class="hero-subtitle">Join us in transforming 1.2M hectares of Zambian rangelands through sustainable agriculture and carbon removals</p>
+                <span class="hero-pretitle">Investment Opportunity</span>
+                <h1 id="hero-heading" class="hero-title">Invest in Sustainable Agriculture & Rangeland Restoration</h1>
+                <p class="hero-subtitle">Join us in transforming 1.2 million hectares of Zambian rangelands through sustainable agriculture, carbon removal, and community empowerment initiatives.</p>
+                <div class="hero-cta">
+                    <a href="#investment" class="btn btn-primary">View Investment Options</a>
+                    <a href="#impact" class="btn btn-outline">Our Impact</a>
+                </div>
                 <div class="hero-metrics">
                     <div class="metric">
-                       
+                        <div class="metric-value">1.2M+ ha</div>
+                        <div class="metric-label">Rangeland Restoration</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">10,000+</div>
+                        <div class="metric-label">Lives Impacted</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">$5M+</div>
+                        <div class="metric-label">Investment Raised</div>
                     </div>
                 </div>
             </div>
         </div>
+        <a href="#overview" class="hero-scroll" aria-label="Scroll to next section">
+            <span>Explore More</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </a>
     </section>
 
     <!-- Project Overview -->
-    <section class="summary-section" role="region" aria-labelledby="summary-heading">
+    <section id="overview" class="section section-overview" role="region" aria-labelledby="overview-heading">
         <div class="container">
-            <h2 id="summary-heading" class="section-title">Project Overview</h2>
-            <div class="title-underline"></div>
-            <div class="summary-grid">
-                <div class="summary-card">
+            <div class="section-header">
+                <span class="section-subtitle">Our Vision</span>
+                <h2 id="overview-heading" class="section-title">Transforming Landscapes & Livelihoods</h2>
+                <div class="title-underline"></div>
+                <p class="section-intro">Pro Green Earth is pioneering sustainable land management across Zambia's Western Province, creating lasting environmental and social impact through innovative agricultural practices and community empowerment.</p>
+            </div>
+            
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
                     <h3>Project Scope</h3>
-                    <p>Initial development of 200,000 hectares with potential to scale to 1.2 million hectares of regenerative rangeland in Zambia's Western Province.</p>
+                    <p>Initial development of 200,000 hectares with potential to scale to 1.2 million hectares of regenerative rangeland in Zambia's Western Province, creating a model for sustainable land use in Africa.</p>
                 </div>
-                <div class="summary-card">
+                
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3>Revenue Streams</h3>
-                    <p>Multiple income sources through carbon credits (VCUs), improved livestock productivity, and potential biodiversity credits.</p>
+                    <p>Diversified income through carbon credits (VCUs), premium grass-fed beef, sustainable agriculture products, and potential biodiversity credits, ensuring long-term financial viability.</p>
                 </div>
-                <div class="summary-card">
+                </div>
+                
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
                     <h3>Community Impact</h3>
                     <p>Project value directly benefits communities through improved livelihoods and sustainable practices.</p>
                 </div>
-                <div class="summary-card">
+                
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
                     <h3>Environmental Impact</h3>
-                    <p>Regenerative agriculture and ecosystem restoration.</p>
+                    <p>Regenerative agriculture and ecosystem restoration at scale, creating carbon sinks and preserving biodiversity.</p>
+                </div>
+            </div>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">30%</div>
+                    <div class="stat-label">Increase in Farmer Incomes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Tons CO₂e Sequestered Annually</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Communities Engaged</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Investment Structure -->
-    <section class="investment-section light-section" role="region" aria-labelledby="investment-heading">
+    <!-- Investment Opportunities -->
+    <section id="investment" class="section section-investment" role="region" aria-labelledby="investment-heading">
         <div class="container">
-            <h2 id="investment-heading" class="section-title">Investment Structure</h2>
-            <div class="title-underline"></div>
+            <div class="section-header">
+                <span class="section-subtitle">Investment Opportunity</span>
+                <h2 id="investment-heading" class="section-title">Sustainable Investment Options</h2>
+                <div class="title-underline"></div>
+                <p class="section-intro">Choose an investment option that aligns with your financial goals and impact objectives, with flexible terms and competitive returns.</p>
+            </div>
             
-            <div class="finance-grid">
-                <div class="finance-card primary">
-                    <div class="card-header">
-                        <h3>Carbon Credit Revenue</h3>
+            <div class="investment-grid">
+                <div class="investment-card">
+                    <div class="investment-header">
+                        <h3>Starter Investment</h3>
+                        <div class="investment-amount">$10,000+</div>
+                        <div class="investment-period">5 Year Term</div>
                     </div>
-                    <ul class="feature-list">
-                        <li>High-integrity carbon removals</li>
-                        <li>Verified Carbon Units (VCUs)</li>
-                        <li>Forward contract opportunities</li>
-                        <li>Long-term revenue stream</li>
-                    </ul>
+                    <div class="investment-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>8-12% Annual Return</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quarterly Distributions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Carbon Credit Participation</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Annual Impact Report</span>
+                        </div>
+                    </div>
+                    <div class="investment-cta">
+                        <a href="#contact" class="btn btn-primary">Invest Now</a>
+                    </div>
                 </div>
                 
-                <div class="finance-card primary">
-                    <div class="card-header">
-                        <h3>Agricultural Returns</h3>
+                <div class="investment-card featured">
+                    <div class="investment-header">
+                        <div class="popular-tag">Most Popular</div>
+                        <h3>Growth Investment</h3>
+                        <div class="investment-amount">$50,000+</div>
+                        <div class="investment-period">7 Year Term</div>
                     </div>
-                    <ul class="feature-list">
-                        <li>Improved livestock productivity</li>
-                        <li>Sustainable dairy production</li>
-                        <li>Enhanced crop yields</li>
-                        <li>Market access improvements</li>
-                    </ul>
+                    <div class="investment-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>12-15% Annual Return</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quarterly Distributions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Enhanced Carbon Credit Share</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Bi-Annual Site Visits</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quarterly Impact Reports</span>
+                        </div>
+                    </div>
+                    <div class="investment-cta">
+                        <a href="#contact" class="btn btn-primary">Invest Now</a>
+                    </div>
+                </div>
+                
+                <div class="investment-card">
+                    <div class="investment-header">
+                        <h3>Enterprise Investment</h3>
+                        <div class="investment-amount">$250,000+</div>
+                        <div class="investment-period">10 Year Term</div>
+                    </div>
+                    <div class="investment-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>15-20% Annual Return</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Monthly Distributions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium Carbon Credit Share</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quarterly Site Visits</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Custom Impact Reporting</span>
+                        </div>
+                    </div>
+                    <div class="investment-cta">
+                        <a href="#contact" class="btn btn-primary">Schedule a Call</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="benefit-sharing">
-                <h3>Value Distribution</h3>
-                <div class="distribution-grid">
-                    <div class="distribution-item">
-                        <span class="percent"></span>
-                        <p>Direct Community Benefits<br><small>Sustainable Livelihoods</small></p>
+                <div class="title-underline"></div>
+                <p class="section-intro">Our innovative investment model delivers both financial returns and measurable impact through diversified revenue streams.</p>
+            </div>
+            
+            <div class="investment-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="carbon">Carbon Credits</button>
+                    <button class="tab-btn" data-tab="agriculture">Agriculture</button>
+                    <button class="tab-btn" data-tab="biodiversity">Biodiversity</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="carbon" class="tab-pane active">
+                        <div class="tab-grid">
+                            <div class="tab-info">
+                                <h3>High-Integrity Carbon Credits</h3>
+                                <p>Our verified carbon units (VCUs) are generated through proven regenerative agricultural practices that sequester carbon in soil and vegetation.</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check-circle"></i> High-quality carbon removal credits</li>
+                                    <li><i class="fas fa-check-circle"></i> Verified Carbon Standard (VCS) certified</li>
+                                    <li><i class="fas fa-check-circle"></i> 30-year permanence period</li>
+                                    <li><i class="fas fa-check-circle"></i> Transparent monitoring & reporting</li>
+                                </ul>
+                                <a href="#contact" class="btn btn-outline">Request Prospectus</a>
+                            </div>
+                            <div class="tab-visual">
+                                <img src="carbon-credit-illustration.jpg" alt="Carbon Credit Visualization" class="img-fluid">
+                                <div class="carbon-metrics">
+                                    <div class="metric-item">
+                                        <div class="metric-value">5-8</div>
+                                        <div class="metric-label">Tons CO₂e/ha/year</div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-value">30%</div>
+                                        <div class="metric-label">Community Share</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="distribution-item">
-                        <span class="percent"></span>
-                        <p>Barotse Royal Establishment<br><small>Traditional Authority</small></p>
+                </div>
+            </div>
+            
+            <div class="value-distribution">
+                <h3 class="text-center">Equitable Value Distribution</h3>
+                <div class="distribution-chart">
+                    <div class="distribution-item" style="--value: 40">
+                        <div class="distribution-label">40%<br><span>Community Benefits</span></div>
+                        <div class="distribution-bar"></div>
                     </div>
-                    <div class="distribution-item">
-                        <span class="percent"></span>
-                        <p>Government of Zambia<br><small>Regulatory Support</small></p>
+                    <div class="distribution-item" style="--value: 30">
+                        <div class="distribution-label">30%<br><span>Project Operations</span></div>
+                        <div class="distribution-bar"></div>
                     </div>
-                    <div class="distribution-item">
-                        <span class="percent"></span>
-                        <p>Project Operations<br><small>Development & Management</small></p>
+                    <div class="distribution-item" style="--value: 20">
+                        <div class="distribution-label">20%<br><span>Investor Returns</span></div>
+                        <div class="distribution-bar"></div>
+                    </div>
+                    <div class="distribution-item" style="--value: 10">
+                        <div class="distribution-label">10%<br><span>Reinvestment</span></div>
+                        <div class="distribution-bar"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Carbon & Environmental Impact -->
-    <section class="impact-section dark-section" role="region" aria-labelledby="impact-heading">
+    <!-- Impact & Timeline -->
+    <!-- Impact Section -->
+    <section id="impact" class="section section-impact" role="region" aria-labelledby="impact-heading">
         <div class="container">
-            <h2 id="impact-heading" class="section-title">Carbon & Environmental Impact</h2>
-            <div class="title-underline"></div>
+            <div class="section-header">
+                <span class="section-subtitle">Our Impact</span>
+                <h2 id="impact-heading" class="section-title">Measuring Our Success</h2>
+                <div class="title-underline"></div>
+                <p class="section-intro">Our holistic approach delivers measurable environmental, social, and economic benefits across all levels of operation.</p>
+            </div>
             
             <div class="impact-grid">
                 <div class="impact-card">
-                    <h3>Social Integrity</h3>
-                    <p>Carbon sequestration through non-competing land use enhances food production. Our co-design approach ensures:</p>
-                    <ul>
-                        <li>Social safeguarding</li>
-                        <li>Efficient implementation</li>
-                        <li>Equitable benefit sharing</li>
-                        <li>Community engagement</li>
-                    </ul>
+                    <div class="impact-number">1.2M+</div>
+                    <h3>Hectares Restored</h3>
+                    <p>Targeting the restoration of degraded rangelands to productive, carbon-sequestering ecosystems.</p>
                 </div>
                 
                 <div class="impact-card">
-                    <h3>Environmental Integrity</h3>
-                    <p>Our integrated approach creates lasting impact through:</p>
-                    <ul>
-                        <li>Sustainable practice adoption</li>
-                        <li>Carbon sequestration permanence</li>
-                        <li>Minimal leakage risk</li>
-                        <li>Enhanced biodiversity</li>
-                    </ul>
+                    <div class="impact-number">10K+</div>
+                    <h3>Lives Impacted</h3>
+                    <p>Creating sustainable livelihoods and economic opportunities for local communities.</p>
                 </div>
                 
                 <div class="impact-card">
-                    <h3>Timeline & Milestones</h3>
-                    <ul class="timeline-list">
-                        <li><strong>Year 1:</strong> Initial 200,000ha development</li>
-                        <li><strong>Years 2-3:</strong> First carbon credit issuance</li>
-                        <li><strong>Years 3-5:</strong> Scale to additional areas</li>
-                        <li><strong>Year 5+:</strong> Expand to 1.2M hectares</li>
-                    </ul>
+                    <div class="impact-number">500K+</div>
+                    <h3>Tonnes CO₂e</h3>
+                    <p>Annual carbon sequestration potential at full project scale.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-number">50+</div>
+                    <h3>Species Protected</h3>
+                    <p>Conserving biodiversity through sustainable land management practices.</p>
+                </div>
+            </div>
+            </div>
+            
+            <div class="impact-tabs">
+                <div class="impact-tab-buttons">
+                    <button class="impact-tab-btn active" data-tab="social">Social Impact</button>
+                    <button class="impact-tab-btn" data-tab="environmental">Environmental Impact</button>
+                    <button class="impact-tab-btn" data-tab="economic">Economic Impact</button>
+                </div>
+                
+                <div class="impact-tab-content">
+                    <div id="social" class="impact-tab-pane active">
+                        <div class="impact-grid">
+                            <div class="impact-card">
+                                <div class="impact-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Community Empowerment</h3>
+                                <p>Our co-design approach ensures local communities are active participants in the project's success.</p>
+                                <ul class="impact-list">
+                                    <li><i class="fas fa-check"></i> Direct employment opportunities</li>
+                                    <li><i class="fas fa-check"></i> Capacity building programs</li>
+                                    <li><i class="fas fa-check"></i> Women and youth empowerment</li>
+                                    <li><i class="fas fa-check"></i> Improved food security</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="impact-card highlight">
+                                <div class="impact-stats">
+                                    <div class="stat">
+                                        <div class="stat-number">80%</div>
+                                        <div class="stat-label">Local Employment</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-number">45%</div>
+                                        <div class="stat-label">Women Participation</div>
+                                    </div>
+                                </div>
+                                <p>Our commitment to social equity ensures benefits reach all community members.</p>
+                                <a href="#" class="impact-link">Read Community Stories <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-section">
+                <h3 class="text-center">Project Roadmap</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <h4>Project Launch</h4>
+                            <p>Initial community engagement and baseline assessments</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h4>Implementation Phase 1</h4>
+                            <p>200,000 hectares under sustainable management</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2025</div>
+                            <h4>First Verification</h4>
+                            <p>Initial carbon credit issuance and verification</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2026+</div>
+                            <h4>Scale & Expand</h4>
+                            <p>Expand to full 1.2M hectares and diversify revenue streams</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Additional Investment Details moved from Home page -->
     <!-- Investment Benefits -->
-    <section class="benefits-section light-section" role="region" aria-labelledby="benefits-heading">
+    <section id="why-invest" class="section section-benefits" role="region" aria-labelledby="benefits-heading">
         <div class="container">
-            <h2 id="benefits-heading" class="section-title">Why Invest in BR4RP?</h2>
-            <div class="title-underline"></div>
+            <div class="section-header">
+                <span class="section-subtitle">Why Choose Us</span>
+                <h2 id="benefits-heading" class="section-title">Compelling Reasons to Invest</h2>
+                <div class="title-underline"></div>
+                <p class="section-intro">Our unique combination of expertise, methodology, and local presence creates a compelling investment opportunity with multiple layers of value creation.</p>
+            </div>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <span class="benefit-number">01</span>
-                    <h3>Proven Leadership</h3>
-                    <ul class="benefit-list">
-                        <li>30+ years Zambian agriculture experience</li>
-                        <li>13+ years agricultural consulting</li>
-                        <li>10+ years climate finance expertise</li>
-                        <li>8,000+ smallholder farmers impacted</li>
-                    </ul>
+                    <div class="benefit-number">01</div>
+                    <div class="benefit-content">
+                        <h3>Proven Leadership</h3>
+                        <ul class="benefit-list">
+                            <li><i class="fas fa-check"></i> 30+ years Zambian agriculture experience</li>
+                            <li><i class="fas fa-check"></i> 13+ years agricultural consulting</li>
+                            <li><i class="fas fa-check"></i> 10+ years climate finance expertise</li>
+                            <li><i class="fas fa-check"></i> 8,000+ smallholder farmers impacted</li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="benefit-card">
@@ -235,10 +963,24 @@
     </section>
 
     <!-- Project Returns -->
-    <section class="returns-section dark-section" role="region" aria-labelledby="returns-heading">
+    <!-- CTA Section -->
+    <section class="cta-section" role="region" aria-labelledby="cta-heading">
+        <div class="cta-content">
+            <h2 id="cta-heading" class="cta-title">Ready to Make an Impact?</h2>
+            <p class="cta-text">Join us in creating sustainable change while earning competitive returns. Our team is ready to discuss investment opportunities tailored to your goals.</p>
+            <a href="contact.html" class="btn btn-primary">Get Started Today</a>
+        </div>
+    </section>
+    
+    <!-- Returns Section -->
+    <section class="section returns-section" role="region" aria-labelledby="returns-heading">
         <div class="container">
-            <h2 id="returns-heading" class="section-title">Project Returns</h2>
-            <div class="title-underline"></div>
+            <div class="section-header">
+                <span class="section-subtitle">Financial Returns</span>
+                <h2 id="returns-heading" class="section-title">Projected Financial Performance</h2>
+                <div class="title-underline"></div>
+                <p class="section-intro">Our financial model demonstrates strong returns while creating lasting environmental and social impact.</p>
+            </div>
             
             <div class="returns-content">
                 <div class="returns-grid">
@@ -272,25 +1014,23 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Call to Action -->
-    <section class="funding-cta" role="region" aria-labelledby="cta-title">
+    <!-- CTA Section -->
+    <section id="contact" class="section section-cta" role="region" aria-labelledby="cta-title">
         <div class="container">
-            <div class="cta-wrapper">
-                <h2 id="cta-title">Partner in Sustainable Impact</h2>
-                <p>Join us in transforming livelihoods and restoring ecosystems through innovative regenerative agriculture.</p>
-                
-                <div class="cta-metrics">
-                    <div class="cta-metric">
-                        <span class="metric-number">200k ha</span>
-                        <span class="metric-label">Initial Project Area</span>
+            <div class="cta-card">
+                <div class="cta-content">
+                    <span class="cta-pretitle">Join Our Mission</span>
+                    <h2 id="cta-title">Ready to Invest in a Sustainable Future?</h2>
+                    <p>Partner with us to create lasting environmental and social impact while achieving competitive financial returns.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Request Information
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fas fa-file-download"></i> Download Prospectus
+                        </a>
                     </div>
-                    <div class="cta-metric">
-                        <span class="metric-number">8,000+</span>
-                        <span class="metric-label">Community Members</span>
                     </div>
                     <div class="cta-metric">
                         <span class="metric-number">1.2M ha</span>
@@ -314,18 +1054,182 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">PRO GREEN EARTH</span>
-                    <p>Transforming Livelihoods, Restoring Carbon</p>
+                <!-- Column 1: Logo and Description -->
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="progreen_footbarlogo.png" alt="Pro Green Earth logo" class="footer-logo-img">
+                        <div class="footer-logo-text">
+                            <span class="logo-text">PRO GREEN EARTH</span>
+                            <p>Transforming Livelihoods, Restoring Carbon</p>
+                        </div>
+                    </div>
+                    <p class="footer-about-text">Leading sustainable rangeland restoration in Zambia's Western Province through innovative, community-driven solutions for climate resilience and economic growth.</p>
+                    <div class="footer-social" aria-label="Follow us on social media">
+                        <a class="social-link facebook" href="https://facebook.com/progreenearthzambia" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link twitter" href="https://twitter.com/ProGreenEarthZM" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link linkedin" href="https://www.linkedin.com/company/pro-green-earth/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link instagram" href="https://www.instagram.com/progreenearthzambia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-links-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="funding.html">Investment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Western Province, Zambia</p>
+                    <p><i class="fas fa-phone"></i> +260 96 849 3432</p>
+                    <p><i class="fas fa-envelope"></i> renier@progreenearth.africa</p>
+                    
+                    <div class="newsletter-form">
+                        <h4 class="footer-heading">Newsletter</h4>
+                        <p>Subscribe to our newsletter for updates</p>
+                        <form action="#" method="post">
+                            <input type="email" name="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
             </div>
+
+            <!-- Bottom Bar -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Pro Green Earth Zambia. All rights reserved.</p>
+                <div class="footer-links-bottom">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="carousel.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Mobile menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    document.body.classList.toggle('menu-open');
+                    
+                    // Update aria-expanded attribute
+                    const isExpanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+                    hamburger.setAttribute('aria-expanded', !isExpanded);
+                });
+                
+                // Close mobile menu when clicking on a link
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 100;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation to elements when they come into view
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.overview-card, .investment-card, .impact-card');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.8,
+                    delay: i * 0.1
+                });
+            });
+            
+            // Animate timeline items
+            gsap.utils.toArray('.timeline-item').forEach((item, i) => {
+                gsap.from(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 90%',
+                        toggleActions: 'play none none none'
+                    },
+                    opacity: 0,
+                    x: i % 2 === 0 ? -50 : 50,
+                    duration: 0.8,
+                    delay: i * 0.2
+                });
+            });
+        });
+    </script>
 </body>
 </html>
