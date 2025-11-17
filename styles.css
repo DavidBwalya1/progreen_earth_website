@@ -167,20 +167,69 @@
     }
 }
 
-/* Who We Are and What We Do Sections */
-.flex-container {
-    display: flex;
-    gap: 1.5rem;
+/* Who We Are and What We Do Sections - New Compact Design */
+.who-we-are-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     align-items: center;
-    margin: 0.5rem 0;
+    padding: 1rem 0;
+}
+
+.who-we-are-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: rgba(46, 125, 50, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-green);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateX(5px);
+    background: rgba(46, 125, 50, 0.1);
+}
+
+.feature-card i {
+    font-size: 1.2rem;
+    color: var(--primary-green);
+    min-width: 20px;
+}
+
+.feature-card span {
+    font-size: 0.95rem;
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+.who-we-are-visual {
+    position: relative;
+}
+
+.who-we-are-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(10,20,6,0.08);
 }
 
 /* Section demarcation: visually separate 'Who We Are' and 'What We Do' */
 .who-we-are, .what-we-do {
-    min-height: 550px;
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
+    padding: 0.5rem 0;
 }
 
 .who-we-are {
@@ -190,6 +239,7 @@
 
 .what-we-do {
     background: #ffffff;
+    padding: 3rem 0;
 }
 
 .section-title {
@@ -209,21 +259,121 @@
     flex-direction: row-reverse;
 }
 
-.content-half {
-    flex: 1;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* What We Do Section - Background Image Design */
+.what-we-do {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('farm.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 4rem 0;
 }
 
-.image-half {
-    flex: 1;
+.what-we-do::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.what-we-do-content {
     position: relative;
-    min-height: 400px;
+    z-index: 1;
+}
+
+.what-we-do-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.what-we-do-header .section-title {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.what-we-do-header .section-text {
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.what-we-do-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(10, 20, 6, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(10, 20, 6, 0.2);
+    border-color: var(--primary-green);
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+}
+
+.service-icon i {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.service-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 0.5rem 0;
+}
+
+.service-content p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.what-we-do-visual {
+    text-align: center;
+}
+
+.what-we-do-visual img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(10,20,6,0.08);
+    margin: 0 auto;
 }
 
 .section-image {
@@ -280,12 +430,12 @@
 .activity-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
-    margin: 1.5rem 0;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
 .activity-item {
-    padding: 1.5rem;
+    padding: 1.2rem;
     background: rgba(46, 125, 50, 0.05);
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -326,27 +476,58 @@
 }
 
 @media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
+    .who-we-are-grid {
+        grid-template-columns: 1fr;
         gap: 2rem;
+        padding: 1rem 0;
     }
 
-    .flex-container.reverse {
-        flex-direction: column;
+    .feature-cards {
+        gap: 0.5rem;
     }
 
-    .content-half {
+    .feature-card {
+        padding: 0.5rem;
+    }
+
+    .what-we-do {
+        padding: 3rem 0;
+        background-attachment: scroll;
+    }
+
+    .what-we-do-header {
+        margin-bottom: 2rem;
+    }
+
+    .what-we-do-header .section-text {
+        padding: 0.75rem;
+    }
+
+    .what-we-do-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .service-card {
         padding: 1rem;
     }
 
-    .activity-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .service-icon {
+        width: 40px;
+        height: 40px;
     }
 
-    .stat-container {
-        flex-direction: column;
-        gap: 1rem;
+    .service-icon i {
+        font-size: 1.2rem;
+    }
+
+    .service-content h3 {
+        font-size: 1rem;
+    }
+
+    .service-content p {
+        font-size: 0.85rem;
     }
 }
 
@@ -354,7 +535,7 @@
     font-size: 1.1rem;
     line-height: 1.8;
     color: #444;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 /* Section CTA (Learn More) */
@@ -809,7 +990,7 @@ img {
 }
 
 .logo-image {
-    height: 100px; /* Increased logo size */
+    height: 120px; /* Increased logo size */
     width: auto;
     max-width: 700px;
     transition: transform 0.3s ease;
@@ -2238,6 +2419,7 @@ button, .button, .btn, .cta-button {
 
 .team-section {
     background-color: white;
+    padding-top: var(--spacing-xl);
 }
 
 .team-intro {
@@ -3132,6 +3314,225 @@ button, .button, .btn, .cta-button {
 .gallery-overlay p {
     font-size: 0.95rem;
     opacity: 0.9;
+}
+
+/* Spacing between recent and older galleries */
+.older-gallery {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(46, 125, 50, 0.1);
+}
+
+.older-gallery-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.older-gallery-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.older-gallery-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    border-radius: 2px;
+}
+
+/* Gallery View More Button */
+.gallery-more-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.gallery-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+}
+
+.gallery-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+}
+
+.gallery-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.gallery-more-btn.expanded i {
+    transform: rotate(180deg);
+}
+
+/* Image Modal */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-info {
+    text-align: center;
+    color: white;
+    margin-top: 1.5rem;
+    max-width: 600px;
+}
+
+.modal-info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+}
+
+.modal-info p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Gallery Modal Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 1rem;
+        max-width: 95%;
+        max-height: 95vh;
+    }
+
+    .close-modal {
+        top: 0.5rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+
+    .modal-image {
+        max-height: 60vh;
+    }
+
+    .modal-info {
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
+    .modal-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .modal-info p {
+        font-size: 1rem;
+    }
+
+    .gallery-more-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 0.5rem;
+        max-width: 98%;
+        max-height: 98vh;
+    }
+
+    .close-modal {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+    }
+
+    .modal-image {
+        max-height: 50vh;
+    }
+
+    .modal-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .modal-info p {
+        font-size: 0.9rem;
+    }
+
+    .gallery-more-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
 }
 
 /* Why Invest Section */
@@ -5874,6 +6275,11 @@ button, .button, .btn, .cta-button {
 }
 
 /* About page styles */
+/* Reduce section padding for about page */
+.about-page .section {
+    padding: 1.5rem 0;
+}
+
 .about-hero {
     background-image: url('about-hero.jpg');
     background-size: cover;
@@ -5909,6 +6315,12 @@ button, .button, .btn, .cta-button {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-top: 1rem;
+}
+
+/* Center the last team member */
+.team-member:last-child {
+    grid-column: 2 / 3;
+    justify-self: center;
 }
 .team-member {
     background: #fff;
@@ -6271,6 +6683,36 @@ button, .button, .btn, .cta-button {
     color: var(--primary-green);
     margin-bottom: 2rem;
     font-size: 2.5rem;
+}
+
+/* Ensure section titles are centered on index page */
+.who-we-are .section-title,
+.quick-contact-section .section-title {
+    text-align: center;
+}
+
+/* What We Do title remains left aligned */
+.what-we-do-header .section-title {
+    text-align: left !important;
+}
+
+/* Center Who We Are title within grid */
+.who-we-are-content .section-title {
+    text-align: center !important;
+}
+
+/* Force center Who We Are title with higher specificity */
+section.who-we-are .who-we-are-content .section-title {
+    text-align: center !important;
+}
+
+/* Center Get Started Today title */
+.quick-contact-section .section-header {
+    text-align: center;
+}
+
+.quick-contact-section .section-header .section-title {
+    text-align: center;
 }
 
 /* Responsive adjustments */
