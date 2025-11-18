@@ -48,7 +48,7 @@ Choose one of these verification methods:
    - Homepage (/)
    - index.html
    - about.html
-   - impact.html
+   - impact1.html
    - funding.html
    - activities.html
    - gallery.html
@@ -202,7 +202,7 @@ This shows all indexed pages from your domain.
 1. https://davidbwalya1.github.io/progreen_earth_website/
 2. https://davidbwalya1.github.io/progreen_earth_website/index.html
 3. https://davidbwalya1.github.io/progreen_earth_website/about.html
-4. https://davidbwalya1.github.io/progreen_earth_website/impact.html
+4. https://davidbwalya1.github.io/progreen_earth_website/impact1.html
 5. https://davidbwalya1.github.io/progreen_earth_website/activities.html
 6. https://davidbwalya1.github.io/progreen_earth_website/gallery.html
 7. https://davidbwalya1.github.io/progreen_earth_website/team.html
