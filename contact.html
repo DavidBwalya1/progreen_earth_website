@@ -23,7 +23,7 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="impact.html">Impact</a></li>
+                   
            
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="team.html">Team</a></li>
@@ -93,23 +93,12 @@
                         <p><a href="http://www.progreenearth.africa" target="_blank" rel="noopener">progreenearth.africa</a></p>
                     </div>
 
-                    <div class="card">
-                        <h4>Chairman</h4>
-                        <p class="meta">Carl Irwin</p>
-                        <p><a href="mailto:carl@kyindu.com">carl@kyindu.com</a></p>
-                    </div>
+                    
 
                     
                 </div>
 
-                <div class="contact-cta" style="margin-top:1.25rem;">
-                    
-                    <div class="cta-actions">
-                        <a href="#" class="btn-primary" onclick="openCalendlyFromCard();return false;">Message</a>
-                        
-                    </div>
-                </div>
-            </aside>
+                                         </aside>
         </div>
     </main>
 
@@ -163,14 +152,7 @@
                     <p><i class="fas fa-phone"></i> +260 96 849 3432</p>
                     <p><i class="fas fa-envelope"></i> renier@progreenearth.africa</p>
                     
-                    <div class="newsletter-form">
-                        <h4 class="footer-heading">Newsletter</h4>
-                        <p>Subscribe to our newsletter for updates</p>
-                        <form action="#" method="post">
-                            <input type="email" name="email" placeholder="Your email address" required>
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -192,7 +174,7 @@
     <script>
     (function(){
         // Replace this with your actual Calendly event URL
-        var calendlyBase = 'https://calendly.com/YOUR_CALENDLY_USERNAME/meeting';
+        var calendlyBase = 'https://calendly.com/intern1-impuls/30min';
 
         function isCalendlyReady(){
             return !!(window.Calendly && typeof Calendly.initPopupWidget === 'function');
@@ -234,24 +216,15 @@
         }
 
         window.openCalendlyFromCard = function(){
-            if(!calendlyBase || calendlyBase.indexOf('YOUR_CALENDLY_USERNAME') !== -1){
-                alert('Please set your Calendly URL in the page script before using this feature.');
-                return;
+            var url = 'https://calendly.com/intern1-impuls/30min';
+            
+            // Try to open as popup first
+            var popup = window.open(url, 'calendly', 'width=900,height=700,scrollbars=yes,resizable=yes');
+            
+            // Fallback to new tab if popup is blocked
+            if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+                window.open(url, '_blank');
             }
-            var url = buildCalendlyUrl();
-            loadCalendlyThen(function(){
-                if(isCalendlyReady()){
-                    try{
-                        Calendly.initPopupWidget({url: url});
-                    }catch(e){
-                        console.warn('Calendly popup failed, opening in new window', e);
-                        window.open(url, 'calendly', 'width=900,height=700');
-                    }
-                } else {
-                    // last resort fallback
-                    window.open(url, 'calendly', 'width=900,height=700');
-                }
-            });
         };
 
         window.clearContactCard = function(){
