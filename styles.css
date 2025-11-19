@@ -6948,7 +6948,7 @@ button, .button, .btn, .cta-button {
     .home-page .nav-links::before {
         content: '';
         display: block;
-        height: 120px;
+        height: 140px;
         background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
         position: relative;
     }
@@ -7171,7 +7171,7 @@ button, .button, .btn, .cta-button {
     .gallery-page .nav-links::before {
         content: '';
         display: block;
-        height: 120px;
+        height: 140px;
         background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
         position: relative;
     }
