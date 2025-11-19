@@ -5731,6 +5731,15 @@ button, .button, .btn, .cta-button {
         position: relative;
     }
     
+    .home-page .nav-links::after,
+    .gallery-page .nav-links::after,
+    .about-page .nav-links::after,
+    .team-page .nav-links::after,
+    .contact-page .nav-links::after {
+        display: none !important;
+        content: none !important;
+    }
+    
     .nav-links::after {
         content: '';
         position: absolute;
@@ -7931,6 +7940,31 @@ section.who-we-are .who-we-are-content .section-title {
 
 /* Ensure anchor links land below the fixed navbar */
 html { scroll-padding-top: 110px; }
+
+/* FINAL OVERRIDE - Hide any Menu text that might still appear */
+.home-page .nav-links::after,
+.gallery-page .nav-links::after,
+.about-page .nav-links::after,
+.team-page .nav-links::after,
+.contact-page .nav-links::after,
+.nav-links::after {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Additional override for any pseudo-elements that might contain Menu text */
+.home-page .nav-links::before,
+.gallery-page .nav-links::before,
+.about-page .nav-links::before,
+.team-page .nav-links::before,
+.contact-page .nav-links::before {
+    display: none !important;
+    content: none !important;
+}
 
 
 
