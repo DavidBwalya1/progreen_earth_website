@@ -3609,18 +3609,18 @@ button, .button, .btn, .cta-button {
     /* Enhanced carousel dots for mobile */
     .carousel-dots {
         bottom: 15px;
-        gap: 12px;
-        padding: 8px;
+        gap: 8px;
+        padding: 6px;
         background: rgba(0, 0, 0, 0.3);
-        border-radius: 20px;
+        border-radius: 15px;
         backdrop-filter: blur(5px);
         z-index: 15; /* Ensure dots are above content */
     }
     
     .dot {
-        width: 14px;
-        height: 14px;
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        width: 8px;
+        height: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
         transition: all 0.3s ease;
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
@@ -3629,7 +3629,7 @@ button, .button, .btn, .cta-button {
     .dot:hover,
     .dot.active {
         background-color: #ffffff;
-        transform: scale(1.2);
+        transform: scale(1.3);
         border-color: #ffffff;
     }
     
