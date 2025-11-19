@@ -1,0 +1,180 @@
+/* Mobile-first responsive overrides for team.html
+   These rules only apply to screens at or below the specified breakpoints
+   and therefore won't affect the desktop layout. */
+
+/* Base: no changes to desktop - all rules are inside max-width queries */
+
+/* Tablet and small laptops */
+@media (max-width: 900px) {
+  /* Use a single-column layout on tablets and below to ensure one card per row */
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .team-member img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .team-member p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .page-title {
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
+  }
+}
+
+/* Mobile navbar positioning fix: ensure single consistent slide-in behavior
+   This overrides any conflicting left-based rules in the main stylesheet so
+   the hamburger reliably slides the menu in from the right on small screens. */
+@media (max-width: 992px) {
+  .nav-links {
+    right: -100% !important;
+    left: auto !important;
+    top: 0 !important;
+    width: 300px !important;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.12) !important;
+  }
+
+  .nav-links.active {
+    right: 0 !important;
+    left: auto !important;
+  }
+
+  /* Backdrop should appear behind the menu but above content */
+  .menu-backdrop {
+    z-index: 1000 !important;
+  }
+
+  .menu-backdrop.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Large phones */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Force a single-column layout and prevent float side-effects */
+  .team-grid, .container .team-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  .team-member {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 14px 12px !important;
+    display: block !important; /* block ensures full-width stacking and natural document flow */
+    border-radius: 8px;
+    background: transparent; /* keep desktop background unaffected */
+    clear: both !important;
+    overflow: visible;
+  }
+
+  .team-member img {
+    width: 88px !important;
+    height: 88px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    float: none !important; /* remove float so cards don't sit side-by-side */
+    margin: 0 0 10px 0 !important;
+    display: block !important;
+  }
+
+  /* Center image above the text and center-align content for mobile */
+  .team-member {
+    text-align: center !important;
+  }
+
+  .team-member h4, .team-member p {
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Ensure long names and bios wrap and do not overflow on small screens */
+  .team-member h4 {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+    font-weight: 600;
+  }
+
+  .team-member p {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+    color: #333 !important;
+    margin-top: 8px !important;
+  }
+
+  .team-member h4 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+  }
+
+  .team-member p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  .approvals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .team-member img {
+    width: 72px;
+    height: 72px;
+    margin-right: 10px;
+  }
+
+  .team-member h4 {
+    font-size: 1rem;
+  }
+
+  .team-member p {
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-btn {
+    padding: 8px 10px;
+    font-size: 18px;
+  }
+}

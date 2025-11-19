@@ -62,14 +62,592 @@
 .contact-cta .cta-actions{display:flex;gap:.75rem}
 
 /* Responsive */
+@media(max-width:1200px){
+    .contact-grid{gap:2rem}
+}
+
 @media(max-width:980px){
-    .contact-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;gap:2rem}
     .contact-cta{flex-direction:column;align-items:flex-start}
     .contact-hero{padding:2.5rem 0}
+    .contact-cards{gap:1.5rem}
+}
+
+@media(max-width:768px){
+    .contact-hero{
+        padding:2rem 0;
+        text-align:center
+    }
+    .contact-hero .page-title{font-size:2rem;margin-bottom:1rem}
+    .contact-hero .page-subtitle{font-size:1rem;line-height:1.6;padding:0 1rem}
+    
+    .contact-grid{gap:1.5rem;margin-top:1.5rem}
+    .contact-form{padding:1.5rem;border-radius:10px}
+    .contact-form h3{font-size:1.3rem;margin-bottom:1rem}
+    .contact-form .note{font-size:.9rem}
+    
+    .contact-cards{gap:1rem}
+    .card{padding:1rem;border-radius:8px}
+    .card h4{font-size:1.1rem;margin-bottom:.3rem}
+    .card p, .card a{font-size:.95rem}
+    
+    .faq{margin-top:2rem}
+    .faq h3{font-size:1.2rem;margin-bottom:1rem}
+    .faq-item{padding:.9rem;border-radius:6px;margin-bottom:.5rem}
+    .faq-item summary{font-size:.95rem;padding:.3rem 0}
+    .faq-item p{font-size:.9rem}
+    
+    .btn-primary{padding:.8rem 1.4rem;font-size:.95rem}
+    .btn-ghost{padding:.7rem 1rem;font-size:.9rem}
+}
+
+@media(max-width:600px){
+    .container{padding:0 1rem}
+    .contact-hero .page-subtitle{padding:0}
+    .contact-form{padding:1rem}
+    .contact-form h3{font-size:1.25rem}
+    .card{padding:.9rem}
+    .card h4{font-size:1rem}
+    .card p, .card a{font-size:.9rem}
 }
 
 @media(max-width:480px){
-    .contact-form .form-row{grid-template-columns:1fr}
-    .contact-form{padding:1.2rem}
-    .map-placeholder{height:180px}
+    .contact-hero{padding:1.5rem 0}
+    .contact-hero .page-title{font-size:1.8rem}
+    .contact-hero .page-subtitle{font-size:.95rem}
+    
+    .contact-grid{gap:1rem;margin-top:1rem}
+    .contact-form{padding:.8rem;border-radius:8px}
+    .contact-form h3{font-size:1.2rem;margin-bottom:.8rem}
+    .contact-form label{font-size:.9rem;margin-bottom:.3rem}
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select{padding:.7rem;font-size:.9rem;border-radius:6px}
+    .contact-form textarea{min-height:120px}
+    .contact-form .form-row{grid-template-columns:1fr;gap:.8rem}
+    .contact-form .note{font-size:.85rem}
+    
+    .contact-cards{gap:.8rem}
+    .card{padding:.8rem;border-radius:6px}
+    .card h4{font-size:.95rem;margin-bottom:.25rem}
+    .card p, .card a{font-size:.85rem;line-height:1.5}
+    .card .meta{font-size:.85rem}
+    
+    .faq{margin-top:1.5rem}
+    .faq h3{font-size:1.1rem;margin-bottom:.8rem}
+    .faq-item{padding:.7rem;border-radius:5px;margin-bottom:.4rem}
+    .faq-item summary{font-size:.9rem;padding:.2rem 0}
+    .faq-item p{font-size:.85rem;line-height:1.5}
+    
+    .btn-primary{padding:.7rem 1.2rem;font-size:.9rem;border-radius:20px}
+    .btn-ghost{padding:.6rem .9rem;font-size:.85rem;border-radius:6px}
+    
+    .map-placeholder{height:160px;border-radius:6px}
+}
+
+@media(max-width:360px){
+    .container{padding:0 .8rem}
+    .contact-hero .page-title{font-size:1.6rem}
+    .contact-hero .page-subtitle{font-size:.9rem}
+    .contact-form{padding:.6rem}
+    .contact-form h3{font-size:1.1rem}
+    .card{padding:.6rem}
+    .btn-primary{padding:.6rem 1rem;font-size:.85rem}
+}
+
+/* Landscape orientation fixes */
+@media(max-width:896px) and (orientation:landscape){
+    .contact-hero{padding:1.5rem 0}
+    .contact-hero .page-title{font-size:1.8rem}
+    .contact-hero .page-subtitle{font-size:.95rem}
+    .contact-grid{gap:1rem}
+    .contact-form{padding:1rem}
+    .faq{margin-top:1.5rem}
+}
+
+/* Touch-friendly improvements */
+@media(hover: none) and (pointer: coarse){
+    .btn-primary,
+    .btn-ghost,
+    .faq-item summary{
+        min-height:44px;
+        display:flex;
+        align-items:center;
+        justify-content:center
+    }
+    .faq-item summary{
+        justify-content:flex-start
+    }
+    .card a{
+        display:inline-block;
+        padding:.2rem 0
+    }
+}
+
+/* Content Overlap Prevention */
+@media (max-width: 768px) {
+    /* Prevent content from being hidden behind fixed navigation */
+    html {
+        scroll-padding-top: 70px;
+    }
+    
+    body {
+        padding-top: 70px;
+    }
+    
+    /* Ensure sections don't overlap */
+    section {
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Prevent text overflow */
+    * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    /* Fix any potential z-index issues */
+    .contact-hero {
+        z-index: 1;
+    }
+    
+    .contact-grid {
+        z-index: 2;
+    }
+    
+    .contact-form-section {
+        z-index: 3;
+    }
+    
+    .contact-cards {
+        z-index: 4;
+    }
+    
+    .faq-section {
+        z-index: 5;
+    }
+    
+    .footer {
+        z-index: 6;
+    }
+    
+    /* Prevent images from overflowing */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Fix any potential layout issues */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure buttons don't overflow */
+    .btn, button, input[type="submit"] {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Fix form elements */
+    input, textarea, select {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Prevent long URLs from breaking layout */
+    a {
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        scroll-padding-top: 65px;
+    }
+    
+    body {
+        padding-top: 65px;
+    }
+    
+    /* More aggressive overflow prevention */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Ensure text remains readable */
+    h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Fix potential button issues */
+    .btn, button, input[type="submit"] {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Ultra-small screen adjustments */
+    .container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    /* Prevent any remaining overflow */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure all interactive elements are accessible */
+    .btn, button, input[type="submit"], a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Landscape orientation fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+    html {
+        scroll-padding-top: 60px;
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+    
+    .navbar {
+        height: 60px !important;
+    }
+    
+    .nav-links {
+        top: 60px !important;
+        height: calc(100vh - 60px) !important;
+    }
+    
+    .nav-overlay {
+        top: 60px !important;
+        height: calc(100vh - 60px) !important;
+    }
+    
+    .logo-image {
+        height: 45px !important;
+    }
+    
+    /* Reduce spacing in landscape */
+    section {
+        padding: 3rem 0 !important;
+    }
+    
+    .contact-hero {
+        padding: 2rem 0 !important;
+    }
+}
+
+/* High DPI displays optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ensure images remain sharp */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+    
+    /* Fix any potential blurry text */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Enhanced Mobile Navigation Dropdown - Contact Page Only */
+@media (max-width: 768px) {
+    /* Enhanced Hamburger Menu */
+    .contact-page .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1002;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-page .hamburger:hover {
+        transform: scale(1.1);
+    }
+
+    .contact-page .hamburger span {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: var(--nav-text);
+        border-radius: 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        margin: 2px 0;
+    }
+
+    .contact-page .hamburger span:nth-child(1) {
+        transform-origin: center;
+    }
+
+    .contact-page .hamburger span:nth-child(2) {
+        transform-origin: center;
+        opacity: 1;
+    }
+
+    .contact-page .hamburger span:nth-child(3) {
+        transform-origin: center;
+    }
+
+    .contact-page .hamburger.active {
+        transform: rotate(90deg);
+    }
+
+    .contact-page .hamburger.active span {
+        background: var(--primary-green);
+    }
+
+    .contact-page .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .contact-page .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .contact-page .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Enhanced Mobile Menu Panel */
+    .contact-page .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background: linear-gradient(135deg, #ffffff 0%, #f8faf8 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+        flex-direction: column;
+        padding: 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1001;
+        overflow-y: auto;
+    }
+
+    .contact-page .nav-links.active {
+        right: 0;
+        box-shadow: -8px 0 30px rgba(0,0,0,0.15);
+    }
+
+    /* Mobile Menu Header */
+    .contact-page .nav-links::before {
+        content: '';
+        display: block;
+        height: 80px;
+        background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+        position: relative;
+    }
+
+    .contact-page .nav-links::after {
+        content: 'Menu';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        z-index: 1;
+    }
+
+    /* Enhanced Navigation Links */
+    .contact-page .nav-links li {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgba(46,125,50,0.08);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-page .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .contact-page .nav-links li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .contact-page .nav-links li:hover::before {
+        transform: translateX(0);
+    }
+
+    .contact-page .nav-links a {
+        display: flex;
+        align-items: center;
+        padding: 1.2rem 1.5rem;
+        color: var(--dark-gray);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        background: transparent;
+    }
+
+    .contact-page .nav-links a:hover {
+        background: rgba(46,125,50,0.05);
+        color: var(--primary-green);
+        padding-left: 2rem;
+        transform: translateX(4px);
+    }
+
+    .contact-page .nav-links a.active {
+        background: linear-gradient(90deg, rgba(46,125,50,0.1), transparent);
+        color: var(--primary-green);
+        font-weight: 600;
+    }
+
+    .contact-page .nav-links a.active::before {
+        content: '▶';
+        position: absolute;
+        left: 1rem;
+        color: var(--primary-green);
+        font-size: 0.8rem;
+    }
+
+    /* Enhanced Overlay */
+    .contact-page .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-page .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Touch-friendly enhancements */
+    .contact-page .nav-links a {
+        min-height: 48px;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .contact-page .hamburger {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 480px) {
+    .contact-page .nav-links {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .contact-page .nav-links a {
+        padding: 1rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .contact-page .hamburger {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-page .hamburger span {
+        width: 20px;
+        height: 2.5px;
+    }
+}
+
+/* Ultra Small Mobile */
+@media (max-width: 360px) {
+    .contact-page .nav-links {
+        width: 95%;
+        max-width: 260px;
+    }
+
+    .contact-page .nav-links a {
+        padding: 0.9rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-page .hamburger {
+        width: 36px;
+        height: 36px;
+    }
+
+    .contact-page .hamburger span {
+        width: 18px;
+        height: 2px;
+    }
+}
+
+/* Print optimization to prevent overlap */
+@media print {
+    body {
+        padding-top: 0;
+    }
+    
+    .navbar {
+        display: none;
+    }
+    
+    .nav-overlay {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .contact-card,
+    .faq-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
 }

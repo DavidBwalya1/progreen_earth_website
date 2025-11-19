@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.getElementById('navLinks');
     const body = document.body;
     
-    // Create overlay element
-    const overlay = document.createElement('div');
-    overlay.className = 'nav-overlay';
-    document.body.appendChild(overlay);
-    
     // Toggle menu function
     function toggleMenu() {
         const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
@@ -19,9 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Toggle active class on hamburger
         hamburger.classList.toggle('active');
-        
-        // Toggle overlay
-        overlay.classList.toggle('active');
         
         // Toggle body scroll
         body.classList.toggle('menu-open');
@@ -36,13 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add click event to hamburger
     hamburger.addEventListener('click', toggleMenu);
-    
-    // Close menu when clicking on overlay
-    overlay.addEventListener('click', function() {
-        if (hamburger.getAttribute('aria-expanded') === 'true') {
-            toggleMenu();
-        }
-    });
     
     // Close menu when clicking on a nav link
     document.querySelectorAll('.nav-links a').forEach(link => {
