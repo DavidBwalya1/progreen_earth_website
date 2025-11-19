@@ -1063,9 +1063,9 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    background: var(--nav-bg);
+    width: 44px;
+    height: 44px;
+    background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -1073,7 +1073,7 @@ img {
     position: relative;
     margin-left: auto;
     border-radius: 0;
-    transition: background-color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Restore default navbar ordering: logo on the left */
@@ -1092,17 +1092,18 @@ img {
 }
 
 .hamburger:hover {
-    background-color: var(--nav-hover);
+    transform: scale(1.1);
 }
 
 .hamburger span {
     display: block;
     width: 24px;
-    height: 2px;
-    background-color: var(--nav-text);
+    height: 3px;
+    background: var(--nav-text);
     border-radius: 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    margin: 2px 0;
 }
 
 .hamburger span + span {
@@ -1110,7 +1111,7 @@ img {
 }
 
 .hamburger.active {
-    background-color: rgba(45, 80, 22, 0.1);
+    background-color: transparent;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -3597,6 +3598,54 @@ button, .button, .btn, .cta-button {
     border-color: var(--accent-green);
 }
 
+/* Universal mobile rule to hide all carousel navigation buttons */
+@media (max-width: 768px) {
+    .carousel-btn,
+    .carousel-btn.prev,
+    .carousel-btn.next {
+        display: none !important;
+    }
+    
+    /* Enhanced carousel dots for mobile */
+    .carousel-dots {
+        bottom: 15px;
+        gap: 12px;
+        padding: 8px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        z-index: 15; /* Ensure dots are above content */
+    }
+    
+    .dot {
+        width: 14px;
+        height: 14px;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .dot:hover,
+    .dot.active {
+        background-color: #ffffff;
+        transform: scale(1.2);
+        border-color: #ffffff;
+    }
+    
+    /* Touch-friendly carousel container */
+    .carousel-container {
+        touch-action: pan-y;
+        -webkit-overflow-scrolling: touch;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    
+    .carousel-slide {
+        touch-action: none;
+    }
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .why-invest-section {
@@ -5795,6 +5844,12 @@ button, .button, .btn, .cta-button {
         height: 8px;
     }
     
+    @media (max-width: 480px) {
+        .carousel-btn {
+            display: none;
+        }
+    }
+    
     /* Section Spacing - Mobile */
     .section {
         padding: var(--spacing-lg) 0;
@@ -6710,6 +6765,7 @@ button, .button, .btn, .cta-button {
     .carousel-btn {
         background-color: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(10px);
+        display: none; /* Hide carousel buttons on mobile */
     }
     
     /* Optimize scrolling performance */
@@ -6776,7 +6832,7 @@ button, .button, .btn, .cta-button {
         align-items: center;
         width: 44px;
         height: 44px;
-        background: var(--nav-bg);
+        background: transparent;
         border: none;
         border-radius: 0;
         cursor: pointer;
@@ -6787,7 +6843,6 @@ button, .button, .btn, .cta-button {
     }
 
     .home-page .hamburger:hover {
-        background-color: var(--nav-hover);
         transform: scale(1.1);
     }
 
@@ -7010,7 +7065,7 @@ button, .button, .btn, .cta-button {
         align-items: center;
         width: 44px;
         height: 44px;
-        background: var(--nav-bg);
+        background: transparent;
         border: none;
         border-radius: 0;
         cursor: pointer;
