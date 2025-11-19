@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     carousels.forEach(carousel => {
         const slides = carousel.querySelectorAll('.carousel-slide');
         const dots = carousel.querySelectorAll('.dot');
+        const arrows = carousel.querySelectorAll('.carousel-arrow');
         let currentSlide = 0;
         let startX = 0;
         let endX = 0;
@@ -116,6 +117,19 @@ document.addEventListener('DOMContentLoaded', function() {
             dot.addEventListener('touchend', (e) => {
                 e.preventDefault();
                 showSlide(index);
+            });
+        });
+        
+        // Arrow click handlers - enhance existing onclick
+        arrows.forEach((arrow) => {
+            // Add touch support in addition to existing onclick
+            arrow.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                if (arrow.classList.contains('prev')) {
+                    prevSlide();
+                } else if (arrow.classList.contains('next')) {
+                    nextSlide();
+                }
             });
         });
         

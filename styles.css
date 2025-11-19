@@ -3608,29 +3608,49 @@ button, .button, .btn, .cta-button {
     
     /* Enhanced carousel dots for mobile */
     .carousel-dots {
+        display: none; /* Hide dots container */
+    }
+    
+    /* Small arrow indicators on sides */
+    .carousel-nav-arrows {
+        position: absolute;
         bottom: 15px;
-        gap: 8px;
-        padding: 6px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 15px;
-        backdrop-filter: blur(5px);
-        z-index: 15; /* Ensure dots are above content */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        z-index: 15;
     }
     
-    .dot {
-        width: 8px;
-        height: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        transition: all 0.3s ease;
+    .carousel-arrow {
+        width: 24px;
+        height: 24px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
+        transition: all 0.3s ease;
         -webkit-tap-highlight-color: transparent;
+        font-size: 12px;
+        font-weight: bold;
+        color: #333;
+        border: 1px solid rgba(0, 0, 0, 0.2);
     }
     
-    .dot:hover,
-    .dot.active {
-        background-color: #ffffff;
-        transform: scale(1.3);
-        border-color: #ffffff;
+    .carousel-arrow:hover {
+        background: #ffffff;
+        transform: scale(1.1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .carousel-arrow.prev {
+        order: 1;
+    }
+    
+    .carousel-arrow.next {
+        order: 2;
     }
     
     /* Touch-friendly carousel container */
