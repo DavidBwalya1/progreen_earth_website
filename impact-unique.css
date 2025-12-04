@@ -500,6 +500,17 @@
     border: 0;
 }
 
+/* Leaflet map container fallback styles */
+#projectMap, .map-container > #projectMap {
+    width: 100%;
+    height: 100%;
+}
+
+.leaflet-container {
+    height: 100% !important;
+    width: 100% !important;
+}
+
 /* Impact CTA */
 .impact-cta {
     padding: 6rem 0;

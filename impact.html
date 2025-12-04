@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact - Pro Green Earth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="impact-unique.css">
+    <!-- Leaflet CSS for interactive maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+q7k5b1ZbXf1KxQ+VYk1b2QmGkKQY2bXk9g6b0+GI=" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="progreen_logo.png" alt="Pro Green Earth - Sustainable Agriculture Zambia" class="logo-image">
+                    </a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="impact.html" class="active">Impact</a></li>
+                  
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="funding.html">Funding</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Impact Hero -->
+    <section class="impact-hero">
+        <img src="hugerangeland.jpg" alt="Barotse rangelands impact" class="impact-hero-bg">
+        <div class="container">
+            <div class="impact-hero-content">
+               
+                    <h1 class="impact-title">Transforming Landscapes, Empowering Communities</h1>
+                <p class="impact-subtitle">Creating measurable change across the Barotse rangelands through community-led restoration and sustainable development.</p>
+                <div class="cta-buttons">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats (like about-intro stats) -->
+    <section id="impact-stats" class="about-intro">
+        <div class="container about-intro-inner">
+            <div class="intro-left">
+                <h1 class="about-heading">Our Impact in Numbers</h1>
+                <p class="about-lead">We combine community-led restoration, improved livestock management, and rigorous monitoring to create resilient landscapes and stronger rural livelihoods.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-value">1.2M</div>
+                        <div class="stat-label">Hectares managed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">34M</div>
+                        <div class="stat-label">Tons CO₂ removed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3.3K+</div>
+                        <div class="stat-label">Households benefiting</div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-right">
+                <div class="about-card-hero">
+                    <img src="withcows.jpeg" alt="Community impact" loading="lazy" />
+                    <div class="card-quote">"Our animals are healthier, and the grasslands are coming back."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Benefits (two-column grid) -->
+    <section id="impact-benefits" class="section about-approach">
+        <div class="container">
+            <div class="grid-2 split">
+                <div>
+                    <h2>How the Project Benefits the Community</h2>
+                    <ul class="approach-list">
+                        <li><strong>Economic empowerment:</strong> Higher incomes from improved livestock and carbon revenue.</li>
+                        <li><strong>Food security:</strong> Better grazing and animal health for reliable food production.</li>
+                        <li><strong>Skills & leadership:</strong> Training in sustainable land management and community governance.</li>
+                        <li><strong>Equity:</strong> Transparent benefit-sharing and inclusive decision-making.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Environmental & Social Impact</h2>
+                    <div class="impact-cards">
+                        <div class="impact-card">
+                            <strong>People</strong>
+                            <p>Thousands of households see improved incomes, resilience, and opportunity.</p>
+                        </div>
+                        <div class="impact-card">
+                            <strong>Planet</strong>
+                            <p>Restored rangelands, increased soil carbon, and richer biodiversity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Voices (testimonials) -->
+    <section class="section about-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Community Voices</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="withcows.jpeg" alt="John Mwanza" loading="lazy">
+                    <h4>John Mwanza</h4>
+                    <p>"The training in rotational grazing has transformed how we manage our cattle. Our animals are healthier, and we're seeing the grasslands recover."</p>
+                </div>
+                <div class="team-member">
+                    <img src="meeting2.jpeg" alt="Mary Lubinda" loading="lazy">
+                    <h4>Mary Lubinda</h4>
+                    <p>"As women in the community, we now have more say in land management decisions. The project has created new opportunities for our families."</p>
+                </div>
+                <div class="team-member">
+                    <img src="meeting2.jpeg" alt="Mary Lubinda" loading="lazy">
+                    <h4>Mary Lubinda</h4>
+                    <p>"As women in the community, we now have more say in land management decisions. The project has created new opportunities for our families."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section about-cta">
+        <div class="container">
+            <div class="about-cta-inner">
+                <div>
+                    <h2>Partner with us</h2>
+                    <p>Donors and partners can help scale restoration across Zambia's rangelands. For funding or partnership inquiries, please visit our Funding page.</p>
+                </div>
+                <div>
+                    <a href="funding.html" class="cta-button primary">Funding & Partnership Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Area (brief) -->
+    <section class="section area-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Area</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="area-content">
+                <p>The project area includes <strong>Mongu, Limilunga, Nalolo, Senanga, Sioma</strong> districts in Zambia's Western Province, spanning <strong>1.2 million hectares</strong>.</p>
+
+                <!-- Interactive project map (district markers - approximate locations) -->
+                <section class="project-map" aria-label="Project locations map">
+                    <div class="map-container">
+                        <div id="projectMap" role="region" aria-label="Map showing project districts"></div>
+                    </div>
+                    <p class="map-note" style="margin-top:.75rem;font-size:.95rem;color:#666;">Markers show district-level project presence. Locations are approximate and labelled by district.</p>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">PRO GREEN EARTH</span>
+                    <p>Transforming Livelihoods, Restoring Carbon</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pro Green Earth Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Leaflet JS and project map initialiser -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7kG1n2m3sW+6f6kQk0qQYc2Y1p+Y9q+3s3uK8k=" crossorigin=""></script>
+    <script src="maps.js"></script>
+</body>
+</html>
